@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import bgImg from "../images/bg.jpg";
-import img1 from "../images/mountain1.png";
-import img2 from "../images/mountain2.png";
-import textImg from "../images/text.png";
+import bird2 from "../images/bird2.png";
+import bird1 from "../images/bird1.png";
+import forest from "../images/forest.png";
+import rocks from "../images/rocks.png";
+import water from "../images/water.png";
 
 function Hero() {
   const [offsetY, setOffset] = useState(0);
-  console.log(offsetY);
+  console.log(offsetY, "offsetY");
 
   const handleScroll = () => {
-    return setOffset(window.scrollY);
+    setOffset(window.scrollY);
   };
 
   useEffect(() => {
@@ -21,33 +23,46 @@ function Hero() {
 
   return (
     <Wrapper>
-      <div className="parallax">
+      <section className="section">
+        <h2 id="text" style={{ top: `${50 + offsetY * -0.5}%` }}>
+          it's time for new adventure
+        </h2>
         <img
-          src={img1}
-          alt="img1"
-          id="img1"
-          style={{ width: (100 + offsetY * 0.3) + "%" , display:offsetY>400?"none":"block"}}
+          src={bird1}
+          alt="bird1"
+          style={{ top: `${offsetY * -1.5}px`, left: `${offsetY * 2}px` }}
         />
-        <img
-          src={img2}
-          alt="img2"
-          id="img2"
-          style={{ width: 100 + offsetY * 0.3 + "%",display:offsetY>400?"none":"block"}}
-        />
-        <img
-          src={textImg}
-          alt="textImg"
-          id="textImg"
-          style={{ top: `-${1 + offsetY * 0.3 + "%"}`,display:offsetY>400?"none":"block"}}
-        />
-      </div>
-      <div className="content">
-        <h2>SIMPLE PArallax with react </h2>
+        <img src={bird2} alt="bird2" 
+        style={{ top: `${offsetY * -1.5}px`, left: `${offsetY * -4}px` }}/>
+        <img src={forest} alt="forest" />
+        <Link to="/" id="btn" style={{top:`${offsetY*1.5}px` }} >
+          Explore
+        </Link>
+        <img src={rocks} alt="rocks" />
+        <img src={water} alt="water" />
+      </section>
+      <div className="div__sec">
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quod
+          dolore et,?
+        </h2>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam earum
-          tempora hic corporis, autem eligendi iste adipisci nesciunt libero?
-          Iure mollitia aliquid tenetur, incidunt illo perspiciatis sed itaque
-          reiciendis cumque!{" "}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
+          dignissimos cumque quod in exercitationem beatae repellendus tempore
+          doloremque expedita? Eum eligendi dignissimos quod porro doloremque
+          commodi, iste accusamus consequuntur tenetur.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
+          dignissimos cumque quod in exercitationem beatae repellendus tempore
+          doloremque expedita? Eum eligendi dignissimos quod porro doloremque
+          commodi, iste accusamus consequuntur tenetur.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
+          dignissimos cumque quod in exercitationem beatae repellendus tempore
+          doloremque expedita? Eum eligendi dignissimos quod porro doloremque
+          commodi, iste accusamus consequuntur tenetur.
         </p>
       </div>
     </Wrapper>
@@ -55,47 +70,61 @@ function Hero() {
 }
 
 const Wrapper = styled.section`
-  .parallax {
-    width: 100%;
-    height: 1000px;
+  .section {
     position: relative;
-    z-index: 10;
-    background: url(${bgImg});
-    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &::before {
       content: "";
       position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
-      height: 200px;
-      bottom: 0%;
-      background: linear-gradient(transparent, #fff);
-    }
-    #img1 {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
+      height: 100px;
       z-index: 9;
+      background: linear-gradient(transparent, #094b65);
     }
-    #img2 {
-      position: absolute;
-      z-index: 9;
+    a{
+        position:absolute;
     }
-    #textImg {
+    img {
       position: absolute;
-      transform: translateY(40%);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #text {
+      position: absolute;
+      text-align: center;
+      font-size: 3rem;
+    }
+    #btn {
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 30px;
+      background: #ff0;
+      color: #094b65;
+      font-size: 1.4rem;
+      border-radius: 10px;
+      transform: translateY(100px);
     }
   }
-
-  .content {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+  .div__sec {
+    position: relative;
+    background: #094b65;
+    padding: 100px;
+    color: #fff;
     h2 {
-      font-size: 2rem;
+      font-size: 4rem;
     }
     p {
-      font-size: 1.5rem;
-      text-align: justify;
+      font-size: 1.4rem;
+      line-height: 2rem;
     }
   }
 `;
