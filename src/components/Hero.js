@@ -24,22 +24,22 @@ function Hero() {
   return (
     <Wrapper>
       <section className="section">
-        <h2 id="text" style={{ top: `${50 + offsetY * -0.5}%` }}>
+        <h2 id="text" style={{ top: `${50 + offsetY * -0.2}%` }}>
           it's time for new adventure
         </h2>
         <img
-          src={bird1}
+          src={bird1} className="bird"
           alt="bird1"
-          style={{ top: `${offsetY * -1.5}px`, left: `${offsetY * 2}px` }}
+          style={{ top: `${offsetY * 1.5}px`, left: `${offsetY * 2}px` }}
         />
-        <img src={bird2} alt="bird2" 
-        style={{ top: `${offsetY * -1.5}px`, left: `${offsetY * -4}px` }}/>
-        <img src={forest} alt="forest" />
+        <img src={bird2} alt="bird2"  className="bird"
+        style={{ top: `${offsetY * 1.5}px`, left: `${offsetY * -4}px` }}/>
+        <img src={forest} alt="forest" style={{top:`${offsetY*0.45}px`}} />
         <Link to="/" id="btn" style={{top:`${offsetY*1.5}px` }} >
           Explore
         </Link>
-        <img src={rocks} alt="rocks" />
-        <img src={water} alt="water" />
+        <img src={rocks} alt="rocks" style={{ top: `${offsetY * -0.12}px` }} />
+        <img src={water} alt="water"  />
       </section>
       <div className="div__sec">
         <h2>
@@ -77,6 +77,8 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow:hidden;
+    background-attachment:fixed;
     &::before {
       content: "";
       position: absolute;
