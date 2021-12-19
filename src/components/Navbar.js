@@ -1,38 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import NavbarList from "./NavbarList";
 import { FaBars } from "react-icons/fa";
+import { useAppContext } from "../context/AppContext";
 
-const List = [
-  { id: 1, name: "Home", path: "/" },
-  { id: 2, name: "about", path: "/about" },
-  { id: 3, name: "projects", path: "/projects" },
-  { id: 4, name: "skills", path: "/skills" },
-];
 
 function Navbar() {
+  const {handleSidebar}=useAppContext();
+
   return (
     <Wrapper>
       <div className="navbar">
-        <FaBars className="navbar__icon" />
+        <FaBars className="navbar__icon" onClick={handleSidebar} />
 
-        <ul className="navbar__list">
-          {List.map((item) => {
-            const { id, name, path } = item;
-            return (
-              <Link key={id} to={path}>
-                {name}
-              </Link>
-            );
-          })}
-        </ul>
+        <NavbarList />
       </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.header`
-  background-color: #262626;
+  background-color: #FFFFFF;
   font-size: 1.5rem;
   position: fixed;
   top: 0;
@@ -54,6 +42,7 @@ const Wrapper = styled.header`
     }
   }
   @media screen and (max-width: 768px) {
+    font-size:1rem;
     .navbar {
       &__icon {
         display: inline-block;
@@ -61,7 +50,7 @@ const Wrapper = styled.header`
       font-size:1.6rem;
       }
       &__list{
-       
+       display:none;
       }
     }
   }
