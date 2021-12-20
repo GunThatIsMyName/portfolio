@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+import work from "../images/work.png";
 
 function Hero(){
   return (
@@ -9,18 +10,25 @@ function Hero(){
         <div className="hero__info">
           <h1 className="hero__title">실패를 발판삼아 배우는 개발자.</h1>
           <p className="hero__text">
-            안녕하세요 실패를 두려워 하지 않는 이준현 입니다.
+            안녕하세요 실패를 두려워 하지 않는 이준현 입니다.<br />
+            끄떡없어
+쓰러지고 떨어져도
+다시 일어나 오를 뿐야<br />
+난 말야
+똑똑히 봐
+깎일수록 깨질수록<br />
+더욱 세지고 강해지는 돌덩이
           </p>
           <div className="hero__icon">
-            <Link to="/" className="hero__btn">
+            <button className="hero__btn">
               Discover More
-            </Link>
+            </button>
           </div>
         </div>
 
         <div className="hero__img">
           <img
-            src="https://ethereum.org/static/9a6e158f4ffd1cb5de246a3ecd0d7f86/81032/hackathon_transparent.png"
+            src={work}
             alt="hero-img"
           />
         </div>
@@ -40,7 +48,7 @@ const Wrapper = styled.section`
   display:flex;
   min-height: 80vh;
   position: relative;
-  background-color: #EBEBEB;
+  background-color: #F3F1ED;
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -62,14 +70,17 @@ const Wrapper = styled.section`
 
       .hero__icon {
         .hero__btn {
-          border: 1px solid black;
+          background-color:#FCB134;
+          border: 1px solid #FCB134;
           color: #222;
+          font-size:1.5rem;
           padding: 8px 16px;
           border-radius: 10px;
           transition: 0.3s linear;
           &:hover {
-            background-color: #222;
-            color: #fff;
+            color:#FCB134;
+            background-color:#222;
+            border: 1px solid transparent;
           }
         }
       }
@@ -107,7 +118,7 @@ const Wrapper = styled.section`
   @media screen and (max-width: 991px) {
     .hero {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
 
       .hero__info {
         .hero__title {
@@ -124,7 +135,7 @@ const Wrapper = styled.section`
       .hero__img {
         text-align: right;
         img {
-          width: 70%;
+          width: 300px;
         }
       }
     }

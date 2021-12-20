@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
+import whoami from "../images/whoami.png";
+
 function About() {
   return (
     <Wrapper>
-      {/* <h1 className="about__title">About</h1>
-        <h2 className="about__subtitle">Who Is 준현?</h2> */}
       <div className="about__section">
-        <div className="about__img">
-          <img
-            src="https://ethereum.org/static/9a6e158f4ffd1cb5de246a3ecd0d7f86/81032/hackathon_transparent.png"
-            alt="face"
-          />
+
+
+        <div className="about__header">
+          <img src={whoami} alt="face" />
+          <h3 className="about__title">내일이 더 기대되는 준현이.</h3>
         </div>
+
+
         <div className="about__me">
-          <h3 className="about__info">내일이 더 기대되는 준현이.</h3>
           <p>
             열성이 많으며 자기 주장이 강하면서 단호하고 지도력과 통솔력이 있다.
             부기능인 Ni(내향 직관)으로 활동적이고 장기적인 계획과 거시적 비전을
@@ -44,10 +45,18 @@ function About() {
       </div>
 
       <div className="about__wave">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" className="shape-fill"></path>
-    </svg>
-</div>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </Wrapper>
   );
 }
@@ -56,82 +65,91 @@ const Wrapper = styled.section`
   min-height: 80vh;
   display: flex;
   align-items: center;
-  margin: auto;
   position: relative;
-  .about__title {
-    font-size: 2rem;
-  }
-  .about__section {
-    margin: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
-    max-width: 1200px;
+
+  .about__section{
+    max-width:1200px;
     margin:auto;
-    padding:0 2rem;
-    .about__img {
-      display: flex;
-      align-items: center;
-      img {
-        width: 100%;
-        border-radius: 10px;
+    padding:2rem 4rem;
+    .about__header{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      align-items:center;
+      img{
+        width:400px;
+        height:300px;
+      }
+      .about__title{
+        text-align:center;
+        font-size:2.5rem;
       }
     }
-    .about__me {
-      text-align: left;
-      .about__info {
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-      }
-      p {
-        &:nth-child(3) {
-          margin: 1rem 0;
+
+    .about__me{
+      margin-bottom:10rem;
+      p{
+        font-size:1.3rem;
+        line-height:2rem;
+        &:nth-child(2){
+          margin:2rem 0;
         }
       }
     }
   }
+  /*  */
 
-/*  */
-
-.about__wave {
+  .about__wave {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-}
+  }
 
-.about__wave svg {
+  .about__wave svg {
     position: relative;
     display: block;
     width: calc(169% + 1.3px);
     height: 127px;
-}
+  }
 
-.about__wave .shape-fill {
-    fill: #B1BDC5;
-}
+  .about__wave .shape-fill {
+    fill: #CACDC5;
+  }
 
-/*  */
+  /*  */
 
   @media screen and (max-width: 991px) {
     display: flex;
+    margin-top:5rem;
     .about__section {
       grid-template-columns: 1fr;
-      padding:0 5rem;
-      .about__img {
-        display: none;
+      padding: 0 5rem;
+      .about__header {
+        margin-bottom:2rem;
+        grid-template-columns:1fr;
+        img{
+          display: none;
+        }
       }
       .about__me {
         text-align: center;
+        p{
+          font-size:1rem;
+        }
       }
     }
   }
 
   @media screen and (max-width: 768px) {
     .about__section {
-      padding:0 2rem;
+      padding: 0 2rem;
+      .about__header{
+        .about__title{
+          font-size:2rem;
+        }
+      }
     }
   }
 `;

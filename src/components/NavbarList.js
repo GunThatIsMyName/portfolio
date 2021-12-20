@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 
 const List = [
@@ -15,7 +16,7 @@ function NavbarList({closeSidebar}) {
           {List.map((item) => {
             const { id, name, path } = item;
             return (
-              <Link key={id} to={path} onClick={closeSidebar&&closeSidebar} >
+              <Link className='navbar__link' key={id} to={path} onClick={closeSidebar&&closeSidebar} >
                 {name}
               </Link>
             );

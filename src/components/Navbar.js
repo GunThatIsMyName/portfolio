@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import NavbarList from "./NavbarList";
 import { FaBars } from "react-icons/fa";
@@ -6,9 +6,24 @@ import { useAppContext } from "../context/AppContext";
 
 function Navbar() {
   const { handleSidebar } = useAppContext();
+const [isNavbarMoving,setNavbar]=useState(false);
+
+  const handleScroll=()=>{
+    let scrollY = window.scrollY;
+    if(scrollY>60){
+      setNavbar(true);
+    }else{
+      setNavbar(false);
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener("scroll",handleScroll)
+    return ()=>window.removeEventListener("scroll",handleScroll)
+  },[])
 
   return (
-    <Wrapper>
+    <Wrapper moving={isNavbarMoving} >
       <div className="navbar">
         <div className="navbar__icons">
           <img
@@ -25,13 +40,16 @@ function Navbar() {
 }
 
 const Wrapper = styled.header`
-  background-color: #ffffff;
+  background-color: ${props=>props.moving?"transparent":"#F3F1ED"};
   font-size: 1.5rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9;
+  &:hover{
+    background-color:${props=>props.moving?"#fff":"#F3F1ED"};
+  }
   .navbar {
     text-transform: uppercase;
     margin: 1rem 2rem;
@@ -47,8 +65,13 @@ const Wrapper = styled.header`
         display: none;
       }
     }
-    a {
-      margin-left: 1rem;
+    .navbar__list{
+      .navbar__link {
+        margin-left: 1rem;
+        &:hover{
+          font-weight:bold;
+        }
+      }
     }
   }
   @media screen and (max-width: 768px) {
@@ -65,7 +88,7 @@ const Wrapper = styled.header`
           font-size: 1.6rem;
         }
       }
-      &__list {
+      .navbar__list {
         display: none;
       }
     }
