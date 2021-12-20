@@ -23,7 +23,7 @@ function Sidebar() {
 const Wrapper = styled.aside`
   position: fixed;
   left: 0;
-  top: ${props=>props.open?-100:0}%;
+  top: ${props=>props.open?0:-100}%;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -63,6 +63,10 @@ const Wrapper = styled.aside`
               transform:scale(1.1)
           }
       }
+  }
+
+  @media screen and (min-width:768px){
+    top: -100%;
   }
 `;
 

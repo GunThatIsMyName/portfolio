@@ -27,7 +27,6 @@ const Wrapper = styled.header`
   left: 0;
   width: 100%;
   z-index: 9;
-  border-bottom: 1px solid black;
   .navbar {
     text-transform: uppercase;
     margin: 1rem;
