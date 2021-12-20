@@ -1,8 +1,8 @@
-import image1 from "../images/13.webp"
-import image2 from "../images/12.webp"
-import image3 from "../images/14.png"
-import image4 from "../images/15.png"
-import image5 from "../images/61.png"
+import image1 from "../images/1.webp"
+import image2 from "../images/2.webp"
+import image3 from "../images/3.png"
+import image4 from "../images/4.png"
+import image5 from "../images/5.png"
 import image6 from "../images/6.png"
 
 import {FaGithub} from "react-icons/fa";
@@ -10,7 +10,7 @@ import {SiNotion} from "react-icons/si";
 
 const siteList = [
     {id:1,site:"https://yello-sneakers.netlify.app/",name:"e-commerce",description:"Nike shoes platform"},
-    {id:2,site:"https://albamong-eb240.firebaseapp.com/",name:"dreamMon",description:"Sharing my dream to others "},
+    {id:2,site:"https://albamong-eb240.firebaseapp.com/",name:"dreamMon",description:"Sharing my dream to others"},
 ]
 
 const skillsList = [

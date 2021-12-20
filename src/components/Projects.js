@@ -11,7 +11,7 @@ function Projects() {
 
 const Wrapper = styled.section`
     min-height:40vh;
-    background:yellow;
+    background:#F7B2D8;
 `;
 
 export default Projects

@@ -9,7 +9,7 @@ function About() {
       <div className="about__section">
         <div className="about__img">
           <img
-            src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+            src="https://ethereum.org/static/9a6e158f4ffd1cb5de246a3ecd0d7f86/81032/hackathon_transparent.png"
             alt="face"
           />
         </div>
@@ -42,16 +42,22 @@ function About() {
           </p>
         </div>
       </div>
+
+      <div className="about__wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" className="shape-fill"></path>
+    </svg>
+</div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
   min-height: 80vh;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   margin: auto;
-  max-width: 1200px;
+  position: relative;
   .about__title {
     font-size: 2rem;
   }
@@ -60,10 +66,14 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
+    max-width: 1200px;
+    margin:auto;
+    padding:0 2rem;
     .about__img {
-      text-align: center;
+      display: flex;
+      align-items: center;
       img {
-        max-width: 300px;
+        width: 100%;
         border-radius: 10px;
       }
     }
@@ -80,16 +90,48 @@ const Wrapper = styled.section`
       }
     }
   }
-  @media screen and (max-width: 768px) {
+
+/*  */
+
+.about__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.about__wave svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 127px;
+}
+
+.about__wave .shape-fill {
+    fill: #B1BDC5;
+}
+
+/*  */
+
+  @media screen and (max-width: 991px) {
     display: flex;
     .about__section {
       grid-template-columns: 1fr;
+      padding:0 5rem;
       .about__img {
         display: none;
       }
       .about__me {
         text-align: center;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about__section {
+      padding:0 2rem;
     }
   }
 `;

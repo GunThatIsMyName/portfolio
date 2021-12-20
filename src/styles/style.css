@@ -25,4 +25,5 @@ body{
     min-height: 100vh;
     margin-top: 60px;
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }

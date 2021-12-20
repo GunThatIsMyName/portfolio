@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { infoList } from "../utils/helps";
 
@@ -22,15 +21,17 @@ function Info() {
 
 const InfoWrapper = styled.ul`
   position: fixed;
+  z-index:9;
   bottom: 0;
   left: 2rem;
   li {
     font-size: 2rem;
+    transition:0.2s linear;
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
     &:hover {
-      transform: scale(1.1);
+      transform: translateY(5px);
     }
     &:last-child {
       &::after {

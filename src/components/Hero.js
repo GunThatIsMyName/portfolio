@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function Hero2() {
+function Hero(){
   return (
     <Wrapper>
       <div className="hero">
@@ -25,6 +25,13 @@ function Hero2() {
           />
         </div>
       </div>
+
+      <div className="hero__wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" className="shape-fill"></path>
+    </svg>
+</div>
+
     </Wrapper>
   );
 }
@@ -32,6 +39,7 @@ function Hero2() {
 const Wrapper = styled.section`
   display:flex;
   min-height: 80vh;
+  position: relative;
   background-color: #EBEBEB;
   .hero {
     display: grid;
@@ -74,7 +82,28 @@ const Wrapper = styled.section`
       }
     }
   }
+/*  */
+.hero__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.hero__wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 235px;
+}
+
+.hero__wave .shape-fill {
+    fill: #fff;
+}
+
+/*  */
   @media screen and (max-width: 991px) {
     .hero {
       display: flex;
@@ -102,4 +131,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Hero2;
+export default Hero;
