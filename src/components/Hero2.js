@@ -7,12 +7,9 @@ function Hero2() {
     <Wrapper>
       <div className="hero">
         <div className="hero__info">
-          <h1 className="hero__title">Making The World Work Better For All</h1>
+          <h1 className="hero__title">실패를 발판삼아 배우는 개발자.</h1>
           <p className="hero__text">
-            Cardano is a blockchain platform for changemakers, innovators, and
-            visionaries, with the tools and technologies required to create
-            possibility for the many, as well as the few, and bring about
-            positive global change.
+            안녕하세요 실패를 두려워 하지 않는 이준현 입니다.
           </p>
           <div className="hero__icon">
             <Link to="/" className="hero__btn">
@@ -33,8 +30,9 @@ function Hero2() {
 }
 
 const Wrapper = styled.section`
-  min-height: 60vh;
-  background-color: #fcfcfc;
+  display:flex;
+  min-height: 80vh;
+  background-color: #EBEBEB;
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;

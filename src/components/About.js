@@ -47,8 +47,10 @@ function About() {
 }
 
 const Wrapper = styled.section`
-  min-height: 50vh;
-  margin: 3rem auto;
+  min-height: 80vh;
+  display:flex;
+  align-items:center;
+  margin: auto;
   max-width: 1200px;
   .about__title {
     font-size: 2rem;

@@ -4,14 +4,19 @@ import NavbarList from "./NavbarList";
 import { FaBars } from "react-icons/fa";
 import { useAppContext } from "../context/AppContext";
 
-
 function Navbar() {
-  const {handleSidebar}=useAppContext();
+  const { handleSidebar } = useAppContext();
 
   return (
     <Wrapper>
       <div className="navbar">
-        <FaBars className="navbar__icon" onClick={handleSidebar} />
+        <div className="navbar__icons">
+          <img
+            src="https://www.designevo.com/res/templates/thumb_small/cute-monkey-and-interesting-gaming.webp?v=1.0.0.2"
+            alt="logo"
+          />
+          <FaBars className="navbar__icon" onClick={handleSidebar} />
+        </div>
 
         <NavbarList />
       </div>
@@ -20,7 +25,7 @@ function Navbar() {
 }
 
 const Wrapper = styled.header`
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-size: 1.5rem;
   position: fixed;
   top: 0;
@@ -29,27 +34,39 @@ const Wrapper = styled.header`
   z-index: 9;
   .navbar {
     text-transform: uppercase;
-    margin: 1rem;
+    margin: 1rem 2rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    &__icon {
-      display: none;
+    .navbar__icons {
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+      .navbar__icon {
+        display: none;
+      }
     }
     a {
       margin-left: 1rem;
     }
   }
   @media screen and (max-width: 768px) {
-    font-size:1rem;
+    font-size: 1rem;
     .navbar {
-      &__icon {
-        display: inline-block;
-        cursor: pointer;
-      font-size:1.6rem;
+      .navbar__icons{
+        display:flex;
+        width:100%;
+        align-items:center;
+        justify-content:space-between;
+        .navbar__icon{
+          display: inline-block;
+          cursor: pointer;
+          font-size: 1.6rem;
+        }
       }
-      &__list{
-       display:none;
+      &__list {
+        display: none;
       }
     }
   }
