@@ -60,10 +60,11 @@ background-image: linear-gradient(0deg, #E9F9FF 0%, #EFF4FF 100%);
     grid-gap: 2rem;
     align-items: center;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 5rem 0;
     max-width: 1200px;
 
     .hero__info {
+      margin:0 2rem;
       .hero__title {
         font-size: 3rem;
         color: #449edf;
