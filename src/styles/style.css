@@ -17,6 +17,10 @@ li {
   list-style: none;
   overflow: hidden;
 }
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding:0;
+}
 a {
   text-decoration: none;
   color: #222;
@@ -29,6 +33,8 @@ body {
 }
 button {
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .live-demo {
@@ -68,3 +74,7 @@ button {
     color: #fff;
     text-decoration: none;
 }
+
+
+
+

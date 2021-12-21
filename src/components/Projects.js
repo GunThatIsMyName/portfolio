@@ -90,6 +90,7 @@ const Wrapper = styled.section`
         margin: auto;
         p {
           margin-bottom: 2rem;
+          line-height: 1.5rem;
         }
         .project__site {
           font-size: 2rem;
@@ -110,39 +111,55 @@ const Wrapper = styled.section`
       .project__image {
         height: 25rem;
         text-align: center;
-        .project__live{
-            position:relative;
-            display:block;
-            height:100%;
-            width:60%;
-            margin:auto;
+        .project__live {
+          position: relative;
+          display: block;
+          height: 100%;
+          width: 60%;
+          margin: auto;
+          overflow: hidden;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+            rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          border-radius: 10px;
+          img {
+            transition: 0.3s linear;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+          }
+          .project__tech__list {
+            position: absolute;
+            visibility: hidden;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000b6;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            transition: 0.1s linear;
+            li {
+              font-size: 1.3rem;
+              margin-bottom: 1rem;
+              text-transform: capitalize;
+              background-color: white;
+              padding: 8px;
+              border-radius: 5px;
+              font-weight: bold;
+            }
+          }
+          &:hover {
+            .project__tech__list {
+              visibility: visible;
+              top: 0;
+            }
             img {
-                height: 100%;
-                width:100%;
-                border-radius: 10px;
-                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-                rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+              transform: scale(1.2);
             }
-            .project__tech__list{
-                position:absolute;
-                z-index:1;
-                top:0;
-                left: 0;
-                width:100%;
-                height:100%;
-                background-color:#00000090;
-                display:flex;
-                justify-content:center;
-                flex-direction:column;
-                align-items:center;
-                li{
-                    font-size:1.3rem;
-                    margin-bottom:1rem;
-                    text-transform:capitalize;
-                    background-color:white;
-
-                }
-            }
+          }
         }
       }
     }
@@ -159,11 +176,11 @@ const Wrapper = styled.section`
   @media screen and (max-width: 480px) {
     .project {
       .project__box {
-          .project__image{
-              .project__live{
-                  width:80%;
-              }
+        .project__image {
+          .project__live {
+            width: 80%;
           }
+        }
       }
     }
   }

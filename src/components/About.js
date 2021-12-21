@@ -1,43 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import whoami from "../images/whoami.png";
+import { aboutList } from "../utils/helps";
 
 function About() {
+  const [loading, setLoading] = useState(true);
+  const [listIndex, setIndex] = useState(0);
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    setInfo(aboutList);
+    setLoading(false);
+    // eslint-disable-next-line
+  }, []);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  const { answer } = info[listIndex];
+
   return (
     <Wrapper>
       <div className="about__section">
+        <h4 className="about__title">about</h4>
         <div className="about__header">
           <img src={whoami} alt="face" />
-          <h3 className="about__title">내일이 더 기대되는 준현이.</h3>
+          <h3 className="about__header__title">내일이 더 기대되는 준현이.</h3>
         </div>
 
-        <div className="about__me">
-          <p>
-            열성이 많으며 자기 주장이 강하면서 단호하고 지도력과 통솔력이 있다.
-            부기능인 Ni(내향 직관)으로 활동적이고 장기적인 계획과 거시적 비전을
-            선호한다. 지식에 대한 욕구와 관심이 많으며 특히 직관력을 사용해서
-            지적인 자극을 주는 새로운 아이디어에 높은 관심을 가지고 있다. 일
-            처리에 있어 사전 준비를 철저히 하며 주기능인 Te(외향 사고)로 논리,
-            분석적으로 계획하고 조직하여 체계적으로 추진해 나가는 유형이다. 다른
-            사람의 의견에 귀를 기울일 필요가 있으며, 자신과 타인의 감정에 충실할
-            필요가 있다.
-          </p>
-          <p>
-            겉보기 특성 - 사교활동에 매우 적극적이며 본인이 직접 모임을 주도하고
-            적극적으로 대화의 주도권을 이끌어 나가는 힘이 있는 성격이다.
-            이것저것 논리적으로 계산을 하는데도 능숙하고 자기관리능력이 뛰어나
-            한마디로 유능한 성격의 대표주자이다. 회사를 비롯한 집단에서도 유능한
-            직원, 팀장, 재능 있는 구성원의 이미지를 많이 풍긴다.
-          </p>
-          <p>
-            당연하게도 사회적으로 가장 성공하는 성격 유형이기도 하다.[4] 수는
-            전체 인구의 약 1.8%로 적지만 이들의 영향력은 상당히 큰 편. 주로
-            기업가, 고위공무원, 정치가, 전문직 직군에 많이 분포한다. 활기찬
-            성격에 사교활동을 잘하고, 어려운 도전을 마다하지 않고 즐기며 일과
-            친하다보니 성실한 경우가 많은데다 논리정연하게 따지기를 좋아한다.
-            통계를 보면 E형(외향형) 중에서 평균 지능 지수(IQ)도 높은 편이다.
-          </p>
+        <div className="about__box">
+          <div className="about__btns">
+            {aboutList.map((item) => {
+              const { id, question } = item;
+              return (
+                <button className={`about__btn ${listIndex===id-1?"active":""}`} key={id} onClick={() => setIndex(id-1)}>
+                  {question}
+                </button>
+              );
+            })}
+          </div>
+          <div className="about__me">
+            <p>{answer}</p>
+          </div>
         </div>
       </div>
 
@@ -65,11 +71,16 @@ const Wrapper = styled.section`
   position: relative;
 
   background-color: #fff;
-  background-image: linear-gradient(0deg, #FFF6F9 0%, #fff 100%);
+  background-image: linear-gradient(0deg, #fff6f9 0%, #fff 100%);
   .about__section {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 4rem;
+    .about__title {
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
     .about__header {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -78,19 +89,36 @@ const Wrapper = styled.section`
         width: 400px;
         height: 300px;
       }
-      .about__title {
+      .about__header__title {
         text-align: center;
         font-size: 2.5rem;
       }
     }
 
-    .about__me {
+    .about__box {
       margin-bottom: 10rem;
-      p {
-        font-size: 1.3rem;
-        line-height: 2rem;
-        &:nth-child(2) {
-          margin: 2rem 0;
+      display: flex;
+      gap: 4rem;
+
+      .about__btns {
+        flex-basis:25%;
+        display: flex;
+        flex-direction: column;
+        border-right:2px solid black;
+        padding-right:1rem;
+        .about__btn {
+          font-size:1.2rem;
+          margin-bottom:1rem;
+          &.active{
+            color:teal;
+            border-left:4px solid teal;
+          }
+        }
+      }
+      .about__me{
+        flex-basis:75%;
+        p{
+          line-height:1.7rem;
         }
       }
     }
@@ -132,9 +160,10 @@ const Wrapper = styled.section`
           display: none;
         }
       }
-      .about__me {
+      .about__box {
         text-align: center;
         p {
+          margin-left: auto;
           font-size: 1rem;
         }
       }
@@ -148,6 +177,23 @@ const Wrapper = styled.section`
         .about__title {
           font-size: 2rem;
         }
+      }
+      .about__box{
+        display:flex;
+        flex-direction:column;
+        .about__btns {
+          border-right:none;
+          padding-bottom:1rem;
+          padding-right:0;
+          border-bottom:2px solid black;
+        .about__btn {
+          border-bottom:4px solid transparent;
+          &.active{
+            color:teal;
+            border-left:none;
+          }
+        }
+      }
       }
     }
   }
