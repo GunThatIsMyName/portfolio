@@ -8,7 +8,7 @@ function Skills() {
     <Wrapper>
       <section className="skill">
         <h1 className="skill__title">My Toolbox & Things I Can Do</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dignissimos impedit obcaecati voluptatem consequuntur magni officiis vero, praesentium quod amet numquam quae odio ipsa sapiente natus nemo suscipit a cumque?</p>
+        <p className="skill__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dignissimos impedit obcaecati voluptatem consequuntur magni officiis vero, praesentium quod amet numquam quae odio ipsa sapiente natus nemo suscipit a cumque?</p>
         <div className="skill__list">
           {skillsList.map((item) => {
             const { id, skill, image } = item;
@@ -35,14 +35,17 @@ function Skills() {
 }
 
 const Wrapper = styled.div`
-  min-height: 60vh;
-  background: #CACDC5;
+  min-height: 80vh;
+  background: #fff;
   position: relative;
   padding-top:6rem;
   padding-bottom:8rem;
   .skill__title {
     margin-bottom: 2rem;
     font-size: 2rem;
+  }
+  .skill__subtitle{
+    color:#FFB261;
   }
   .skill {
     max-width: 1200px;
@@ -79,7 +82,7 @@ const Wrapper = styled.div`
   }
 
   .waves__bottom .shape-fill {
-    fill: #f7b2d8;
+    fill: #FFF6F9;
   }
 
   /*  */
@@ -94,8 +97,10 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     .skill {
+      padding: 1rem;
+      text-align:center;
       .skill__list {
-        padding: 1rem;
+        margin-top:2rem;
         grid-gap: 1rem;
         row-gap: 3rem;
       }

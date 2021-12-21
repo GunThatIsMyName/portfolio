@@ -7,13 +7,10 @@ function About() {
   return (
     <Wrapper>
       <div className="about__section">
-
-
         <div className="about__header">
           <img src={whoami} alt="face" />
           <h3 className="about__title">내일이 더 기대되는 준현이.</h3>
         </div>
-
 
         <div className="about__me">
           <p>
@@ -62,36 +59,38 @@ function About() {
 }
 
 const Wrapper = styled.section`
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;
 
-  .about__section{
-    max-width:1200px;
-    margin:auto;
-    padding:2rem 4rem;
-    .about__header{
-      display:grid;
-      grid-template-columns:auto 1fr;
-      align-items:center;
-      img{
-        width:400px;
-        height:300px;
+  background-color: #fff;
+  background-image: linear-gradient(0deg, #FFF6F9 0%, #fff 100%);
+  .about__section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 4rem;
+    .about__header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      img {
+        width: 400px;
+        height: 300px;
       }
-      .about__title{
-        text-align:center;
-        font-size:2.5rem;
+      .about__title {
+        text-align: center;
+        font-size: 2.5rem;
       }
     }
 
-    .about__me{
-      margin-bottom:10rem;
-      p{
-        font-size:1.3rem;
-        line-height:2rem;
-        &:nth-child(2){
-          margin:2rem 0;
+    .about__me {
+      margin-bottom: 10rem;
+      p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        &:nth-child(2) {
+          margin: 2rem 0;
         }
       }
     }
@@ -115,28 +114,28 @@ const Wrapper = styled.section`
   }
 
   .about__wave .shape-fill {
-    fill: #CACDC5;
+    fill: #fff;
   }
 
   /*  */
 
   @media screen and (max-width: 991px) {
     display: flex;
-    margin-top:5rem;
+    margin-top: 5rem;
     .about__section {
       grid-template-columns: 1fr;
       padding: 0 5rem;
       .about__header {
-        margin-bottom:2rem;
-        grid-template-columns:1fr;
-        img{
+        margin-bottom: 2rem;
+        grid-template-columns: 1fr;
+        img {
           display: none;
         }
       }
       .about__me {
         text-align: center;
-        p{
-          font-size:1rem;
+        p {
+          font-size: 1rem;
         }
       }
     }
@@ -145,9 +144,9 @@ const Wrapper = styled.section`
   @media screen and (max-width: 768px) {
     .about__section {
       padding: 0 2rem;
-      .about__header{
-        .about__title{
-          font-size:2rem;
+      .about__header {
+        .about__title {
+          font-size: 2rem;
         }
       }
     }

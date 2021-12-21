@@ -40,7 +40,7 @@ const [isNavbarMoving,setNavbar]=useState(false);
 }
 
 const Wrapper = styled.header`
-  background-color: ${props=>props.moving?"transparent":"#F3F1ED"};
+  background-color: ${props=>props.moving?"transparent":"#EFF4FF"};
   font-size: 1.5rem;
   position: fixed;
   top: 0;
@@ -48,7 +48,7 @@ const Wrapper = styled.header`
   width: 100%;
   z-index: 9;
   &:hover{
-    background-color:${props=>props.moving?"#fff":"#F3F1ED"};
+    background-color:${props=>props.moving?"#fff":"#EFF4FF"};
   }
   .navbar {
     text-transform: uppercase;
