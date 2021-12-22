@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { SiKakaotalk } from "react-icons/si";
+
 import { infoList } from "../utils/helps";
 
 function Contact() {

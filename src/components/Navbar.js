@@ -59,8 +59,8 @@ function Navbar() {
 }
 
 const Wrapper = styled.header`
-  background-color: #eef4ff;
-  font-size: 1.5rem;
+  background-color: var(--color-blue);
+  font-size: var(--font-medium);
   position: fixed;
   top: 0;
   left: 0;
@@ -93,8 +93,8 @@ const Wrapper = styled.header`
     }
   }
   @media screen and (max-width: 768px) {
-    font-size: 1rem;
-    background-color: #fff;
+    font-size: var(--font-normal);
+    background-color: var(--color-white);
     .navbar {
       display: flex;
       flex-direction: column;
@@ -106,7 +106,7 @@ const Wrapper = styled.header`
         .navbar__icon {
           display: inline-block;
           cursor: pointer;
-          font-size: 1.6rem;
+          font-size: var(--font-medium);
         }
       }
       .navbar__list {

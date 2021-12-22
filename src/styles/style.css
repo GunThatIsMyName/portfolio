@@ -7,12 +7,37 @@ font-family: 'Archivo', sans-serif;
 font-family: 'Nanum Gothic', sans-serif; 
 */
 
+/* Root style */
+
+:root {
+  /* Color */
+  --color-blue: #eef4ff;
+  --color-white: #fff;
+  --color-pink: #e9f9ff;
+  --color-darkblue: #449edf;
+  --color-ligthpink: #fff6f9;
+  --color-black: #222;
+
+  /* font size */
+
+  --font-normal: 1rem;
+  --font-medium: 1.5rem;
+  --font-large: 2rem;
+  --font-biglarge: 2rem;
+  --font-giant: 3rem;
+
+  /* pixels size */
+  --pixels-ten: 10px;
+}
+
+/*  */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 ul,
@@ -20,9 +45,14 @@ li {
   list-style: none;
   overflow: hidden;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -41,43 +71,133 @@ button {
 }
 
 .live-demo {
-    background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
 .live-demo:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
-.source-code{
-    background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB  51%, #1F1C2C  100%);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
+.source-code {
+  background-image: linear-gradient(
+    to right,
+    #1f1c2c 0%,
+    #928dab 51%,
+    #1f1c2c 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
-.source-code:hover{
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+.source-code:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
+/* shape divider css */
 
+    /*  hero section svg */
+    .hero__wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .hero__wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 235px;
+    }
+    .hero__wave .shape-fill {
+      fill: var(--color-white);
+    }
+    /* about section svg */
 
+    .about__wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .about__wave svg {
+      position: relative;
+      display: block;
+      width: calc(169% + 1.3px);
+      height: 127px;
+    }
+    .about__wave .shape-fill {
+      fill: #fff;
+    }
 
+    /* skills section svg */
+    .Skills__waves {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+    .Skills__waves svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 93px;
+    }
+    .Skills__waves .shape-fill {
+      fill: #fff6f9;
+    }
+
+    /* project section svg  */
+    .project__wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .project__wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 83px;
+    }
+
+    .project__wave .shape-fill {
+      fill: #fff;
+    }
+
+/*  */

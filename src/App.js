@@ -1,5 +1,4 @@
-import Info from "./components/Info";
-import Navbar from "./components/Navbar";
+import { Info, Navbar } from "./components";
 import Home from "./page/Home";
 
 function App() {
