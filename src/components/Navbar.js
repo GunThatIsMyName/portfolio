@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import NavbarList from "./NavbarList";
+
 import { FaBars } from "react-icons/fa";
+import { navList } from "../utils/helps";
+import navLogo from "../images/headLogo.png";
 
 function Navbar() {
-
-  const [navbarOpen,setNavbarOpen]=useState(false);
-
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleScroll = () => {
     setNavbarOpen(false);
+  };
+
+  const handleClick = (e) => {
+    let target = e.target.dataset.href;
+    const elementPosition = document.querySelector(`#${target}`).offsetTop;
+    window.scrollTo({
+      left: 0,
+      top: elementPosition,
+    });
   };
 
   useEffect(() => {
@@ -18,24 +27,39 @@ function Navbar() {
   }, []);
 
   return (
-    <Wrapper navbarOpen={navbarOpen} >
+    <Wrapper navbarOpen={navbarOpen}>
       <div className="navbar">
         <div className="navbar__icons">
-          <img
-            src="https://www.designevo.com/res/templates/thumb_small/cute-monkey-and-interesting-gaming.webp?v=1.0.0.2"
-            alt="logo"
+          <img src={navLogo} alt="logo" />
+          <FaBars
+            className="navbar__icon"
+            onClick={() => setNavbarOpen((prev) => !prev)}
           />
-          <FaBars className="navbar__icon" onClick={(()=>setNavbarOpen(prev=>!prev))} />
         </div>
 
-        <NavbarList />
+        <ul className="navbar__list">
+          {navList.map((item) => {
+            const { id, name, path } = item;
+            return (
+              <li
+                className="navbar__link"
+                key={id}
+                to={path}
+                data-href={name}
+                onClick={handleClick}
+              >
+                {name}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.header`
-background-color:#EEF4FF;
+  background-color: #eef4ff;
   font-size: 1.5rem;
   position: fixed;
   top: 0;
@@ -44,13 +68,13 @@ background-color:#EEF4FF;
   z-index: 9;
   .navbar {
     text-transform: uppercase;
-    margin: 1rem 2rem;
+    margin: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .navbar__icons {
       img {
-        width: 40px;
+        width: 70px;
         border-radius: 50%;
       }
       .navbar__icon {
@@ -59,6 +83,8 @@ background-color:#EEF4FF;
     }
     .navbar__list {
       .navbar__link {
+        display: inline;
+        cursor: pointer;
         margin-left: 1rem;
         &:hover {
           font-weight: bold;
@@ -68,10 +94,10 @@ background-color:#EEF4FF;
   }
   @media screen and (max-width: 768px) {
     font-size: 1rem;
-    background-color:#fff;
+    background-color: #fff;
     .navbar {
-      display:flex;
-      flex-direction:column;
+      display: flex;
+      flex-direction: column;
       .navbar__icons {
         display: flex;
         width: 100%;
@@ -84,10 +110,10 @@ background-color:#EEF4FF;
         }
       }
       .navbar__list {
-        display: ${props=>props.navbarOpen?"flex":"none"};
-        flex-direction:column;
-        .navbar__link{
-          margin:0.5rem 0;
+        display: ${(props) => (props.navbarOpen ? "flex" : "none")};
+        flex-direction: column;
+        .navbar__link {
+          margin: 0.5rem 0;
         }
       }
     }

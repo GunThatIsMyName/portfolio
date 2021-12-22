@@ -19,7 +19,7 @@ const siteList = [
     description:
       "신발 플랫폼 입니다. netlify serverless 를 사용해서 신발 data를 받아옵니다. 신발을 둘러보며 마음에 드는 신발을 장바구니에 담을 수 있고 삭제 할 수 있습니다. 장바구니에 담아둔 신발은 locastorage 에 저장됩니다.",
     tech: [
-      "ReactJS",
+      "React JS",
       "netlify serverless",
       "styled-components",
       "react-router-dom",
@@ -33,7 +33,7 @@ const siteList = [
     name: "dreamMon",
     description:
       "드림몬 사이트는 꿈을 공유하는 사이트 입니다. firebase 를 이용해서 글, 사진을 업로드 합니다. 업로드된 게시물은 나포함 다른 유저에게도 실시간으로 보여집니다. 첫 화면은 firebase login 을 이용해서 로그인 한 유저만 home화면에 접속 할수 있습니다. 로그인 하지 않으면 login 화면에 남아있게 됩니다. 자신이 만든 꿈은 수정/삭제 할수 있으며 다른 유저의 게시물은 삭제 불가능 합니다.",
-    tech: ["ReactJS", "firebase", "styled-components", "react-router-dom"],
+    tech: ["React JS", "firebase", "styled-components", "react-router-dom"],
     github: "https://github.com/GunThatIsMyName/dreamMong",
     image: dreammobile,
   },
@@ -84,4 +84,12 @@ const aboutList = [
   },
 ];
 
-export { siteList, skillsList, infoList, aboutList };
+const navList = [
+  { id: 1, name: "home", path: "/" },
+  { id: 2, name: "about", path: "/about" },
+  { id: 3, name: "skills", path: "/skills" },
+  { id: 4, name: "projects", path: "/projects" },
+  { id: 5, name: "contact", path: "/contact" },
+];
+
+export { siteList, skillsList, infoList, aboutList ,navList};

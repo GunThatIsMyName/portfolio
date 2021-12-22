@@ -5,7 +5,7 @@ import SkillItem from "./SkillItem";
 
 function Skills() {
   return (
-    <Wrapper>
+    <Wrapper id="skills">
       <section className="skill">
         <h1 className="skill__title">skills</h1>
         <div className="skill__list">

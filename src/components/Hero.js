@@ -6,7 +6,7 @@ import work from "../images/work.png";
 
 function Hero() {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <div className="hero">
         <div className="hero__info">
           <h1 className="hero__title">실패를 발판삼아 배우는 개발자.</h1>

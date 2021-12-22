@@ -22,7 +22,7 @@ function About() {
   const { answer } = info[listIndex];
 
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <div className="about__section">
         <h4 className="about__title">about</h4>
         <div className="about__header">
