@@ -67,7 +67,7 @@ const Wrapper = styled.section`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 991px) {
     .contact__box {
       .contact__extra {
         display: flex;

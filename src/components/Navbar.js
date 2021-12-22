@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import { navList } from "../utils/helps";
 import navLogo from "../images/headLogo.png";
+import { Helmet } from "react-helmet";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
