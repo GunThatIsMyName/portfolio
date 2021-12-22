@@ -124,6 +124,7 @@ const Wrapper = styled.section`
       .about__me {
         flex-basis: 75%;
         p {
+          font-size:1.2rem;
           line-height: 1.7rem;
         }
       }

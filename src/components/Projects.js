@@ -10,10 +10,11 @@ function Projects() {
         <h4 className="project__title">Projects</h4>
 
         {siteList.map((site) => {
-          const { id, live, name, description, github, image, tech } = site;
+          const { id, live, name, description,type, github, image, tech } = site;
           return (
             <div className="project__box" key={id}>
               <div className="project__info">
+                <h3 className="project__type">{type}</h3>
                 <h3 className="project__site">{name}</h3>
                 <p>{description}</p>
 
@@ -100,9 +101,13 @@ const Wrapper = styled.section`
         p {
           line-height: 1.5rem;
         }
-        .project__site {
+        .project__type {
           font-size: var(--font-large);
-          margin-bottom: 1rem;
+          margin-bottom: 0.3rem;
+        }
+        .project__site{
+          color:#C0C0C0;
+          margin-bottom:1rem;
         }
         .project__btns {
           margin: 1rem 0;

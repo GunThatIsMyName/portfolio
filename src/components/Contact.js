@@ -43,7 +43,9 @@ const Wrapper = styled.section`
   max-width: 1200px;
   margin: auto;
   min-height: 50vh;
-  margin-top: 8rem;
+  margin-top: 4rem;
+  display:flex;
+  flex-direction:column;
   .contact__title {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -67,7 +69,7 @@ const Wrapper = styled.section`
     }
   }
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 768px) {
     .contact__box {
       .contact__extra {
         display: flex;

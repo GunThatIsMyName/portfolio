@@ -9,16 +9,19 @@ const Hero = () => {
     <Wrapper id="home">
       <div className="hero">
         <div className="hero__info">
-          <h1 className="hero__title">실패를 발판삼아 배우는 개발자.</h1>
+          <div className="hero__title">
+            <h1>실패를 발판삼아 배우는</h1>
+            <h3>개발자.</h3>
+          </div>
 
           <p className="hero__text">
-            안녕하세요 실패를 두려워 하지 않는 이준현 입니다.
+            어제보다 성장하는 <strong>이준현</strong> 입니다.
             <br />
-            끄떡없어 쓰러지고 떨어져도 다시 일어나 오를 뿐야
+            배움의 즐거움을 느끼며 <strong>성장</strong> 하고 있습니다.
             <br />
-            난 말야 똑똑히 봐 깎일수록 깨질수록
+            실패를 통해 더 좋은 다음 <strong>기회</strong>를 잡는 이준현 입니다.
             <br />
-            더욱 세지고 강해지는 돌덩이
+
           </p>
 
           <div className="hero__icon">
@@ -31,9 +34,7 @@ const Hero = () => {
         </div>
       </div>
 
-
       <HeroSvg />
-
     </Wrapper>
   );
 };
@@ -59,7 +60,7 @@ const Wrapper = styled.section`
     max-width: 1200px;
 
     .hero__info {
-      margin: 0 2rem;
+      margin-left:4rem;
       .hero__title {
         font-size: var(--font-giant);
         color: var(--color-darkblue);
@@ -68,6 +69,7 @@ const Wrapper = styled.section`
       .hero__text {
         font-size: var(--font-medium);
         margin: 2rem 0;
+        line-height:3rem;
       }
 
       .hero__icon {
@@ -92,7 +94,7 @@ const Wrapper = styled.section`
       text-align: center;
       .hero__img {
         width: 100%;
-        animation: 5s linear imageBreath infinite;
+        animation: 3s linear imageBreath infinite;
       }
     }
   }
@@ -101,7 +103,7 @@ const Wrapper = styled.section`
       transform: translateX(0) translateY(0);
     }
     50% {
-      transform: translateX(-10px) translateY(-10px);
+      transform: translateX(-20px) translateY(-10px);
     }
   }
   @media screen and (max-width: 991px) {
