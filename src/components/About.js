@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import whoami from "../images/whoami.png";
 import { aboutList } from "../utils/helps";
 import AboutSvg from "./shapebox/AboutSvg";
 
@@ -30,7 +29,6 @@ const About = () => {
         <h4 className="about__title">about</h4>
 
         <div className="about__header">
-          <img src={whoami} alt="face" />
           <h3 className="about__header__title">내일이 더 기대되는 준현이.</h3>
         </div>
 
@@ -89,15 +87,10 @@ const Wrapper = styled.section`
       margin-bottom: 4rem;
     }
     .about__header {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      img {
-        width: 400px;
-        height: 300px;
-      }
+      text-align:center;
       .about__header__title {
         text-align: center;
+        margin-bottom:2rem;
         font-size: var(--font-biglarge);
       }
     }
@@ -116,8 +109,8 @@ const Wrapper = styled.section`
           font-size: 1.2rem;
           margin-bottom: 1rem;
           &.active {
-            color: var(--color-darkblue);
-            border-left: 4px solid var(--color-darkblue);
+            color: #EDB504;
+            border-left: 4px solid #EDB504;
           }
         }
       }
@@ -172,7 +165,6 @@ const Wrapper = styled.section`
           .about__btn {
             border-bottom: 4px solid transparent;
             &.active {
-              color: var(--color-darkblue);
               border-left: none;
             }
           }

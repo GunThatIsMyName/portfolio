@@ -25,7 +25,7 @@ function Skills() {
 
 const Wrapper = styled.div`
   min-height: 70vh;
-  background: var(--color-white);
+  background: #E6D8FF;
   position: relative;
   padding-top: 6rem;
   padding-bottom: 8rem;

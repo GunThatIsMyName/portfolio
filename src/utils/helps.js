@@ -9,7 +9,7 @@ import shopmobile from "../images/shopmobile.png";
 import dreammobile from "../images/dreammobile.png";
 
 import { FaGithub } from "react-icons/fa";
-import { SiCodepen, SiFreecodecamp, SiNotion } from "react-icons/si";
+import { SiCodesandbox, SiFreecodecamp, SiNotion } from "react-icons/si";
 
 const siteList = [
   {
@@ -31,12 +31,23 @@ const siteList = [
   {
     id: 2,
     live: "https://albamong-eb240.firebaseapp.com/",
-    name: "dreamMon",
+    name: "습관 리코더",
     type: "Firebase CRUD",
     description:
-      "드림몬 사이트는 꿈을 공유하는 사이트 입니다. firebase 를 이용해서 글, 사진을 업로드 합니다. 업로드된 게시물은 나포함 다른 유저에게도 실시간으로 보여집니다. 첫 화면은 firebase login 을 이용해서 로그인 한 유저만 home화면에 접속 할수 있습니다. 로그인 하지 않으면 login 화면에 남아있게 됩니다. 자신이 만든 꿈은 수정/삭제 할수 있으며 다른 유저의 게시물은 삭제 불가능 합니다.",
+      "건강한 습관을 만들기 위해 사소한 기록을 업로드 하는 사이트 입니다. firebase 를 이용해서 글, 사진을 업로드 합니다. 업로드된 게시물은 나포함 다른 유저에게도 실시간으로 보여집니다. 첫 화면은 firebase login 을 이용해서 로그인 한 유저만 home화면에 접속 할수 있습니다. 로그인 하지 않으면 login 화면에 남아있게 됩니다. 자신이 만든 꿈은 수정/삭제 할수 있으며 다른 유저의 게시물은 삭제 불가능 합니다.",
     tech: ["React JS", "firebase", "styled-components", "react-router-dom"],
     github: "https://github.com/GunThatIsMyName/dreamMong",
+    image: dreammobile,
+  },
+  {
+    id: 3,
+    live: "https://aboutmeta.netlify.app/",
+    name: "About meta",
+    type: "meta tags site",
+    description:
+      "검색창에 웹사이트를 검색하면 사이트가 가지고 있는 Meta tags 들에 대한 정보를 보여줍니다. promptapi 를 사용하여 meta tags 에 대한 정보(title , image , description)를 받아와 보여줍니다. 왜 meta tags 를 사용해야 하는지 이해했습니다. ",
+    tech: ["React JS", "styled-components", "promptapi"],
+    github: "https://github.com/GunThatIsMyName/meta-tags",
     image: dreammobile,
   },
 ];
@@ -60,9 +71,9 @@ const infoList = [
   },
   {
     id: 3,
-    icon: <SiCodepen />,
-    name:"codepen",
-    link: "https://codepen.io/gunthatismyname/pens/",
+    icon: <SiCodesandbox />,
+    name:"sandbox",
+    link: "https://codesandbox.io/u/Jooning",
   },
   {
     id: 4,
@@ -77,7 +88,7 @@ const aboutList = [
     id: 1,
     question: "소개를 해드릴게요",
     answer:
-      "",
+      "독학으로 공부를 하고있는 이준현입니다. ",
   },
   {
     id: 2,
@@ -89,7 +100,7 @@ const aboutList = [
     id: 3,
     question: "왜 코딩을 배웠나요?",
     answer:
-      "호주 워킹홀리데이 중에 코딩을 처음 접했습니다.  농장 일이 끝나면 하루 1시간씩 HTML, CSS 공부를 했습니다.  ,   ",
+      "호주 워킹홀리데이 중에 농장에서 일을 하다가 코딩을 처음 접했습니다.  농장 일이 끝나면 하루 1시간씩 HTML, CSS 공부를 했습니다.  ,   ",
   },
   {
     id: 4,

@@ -21,6 +21,13 @@ function Navbar() {
     });
   };
 
+  const handleTop=()=>{
+    window.scroll({
+      left:0,
+      top:0
+    })
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -30,7 +37,7 @@ function Navbar() {
     <Wrapper navbarOpen={navbarOpen}>
       <div className="navbar">
         <div className="navbar__icons">
-          <img src={navLogo} alt="logo" />
+          <img src={navLogo} alt="logo" onClick={handleTop} />
           <FaBars
             className="navbar__icon"
             onClick={() => setNavbarOpen((prev) => !prev)}
@@ -59,7 +66,7 @@ function Navbar() {
 }
 
 const Wrapper = styled.header`
-  background-color: var(--color-blue);
+background-color:var(--color-white);
   font-size: var(--font-medium);
   position: fixed;
   top: 0;
@@ -74,8 +81,8 @@ const Wrapper = styled.header`
     align-items: center;
     .navbar__icons {
       img {
-        width: 70px;
-        border-radius: 50%;
+        height:50px;
+        cursor: pointer;
       }
       .navbar__icon {
         display: none;

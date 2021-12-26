@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import work from "../images/work.png";
 import HeroSvg from "./shapebox/HeroSvg";
+import HeroCss from "./HeroCss";
 
 const Hero = () => {
   return (
@@ -21,7 +21,6 @@ const Hero = () => {
             <br />
             실패를 통해 더 좋은 다음 <strong>기회</strong>를 잡는 이준현 입니다.
             <br />
-
           </p>
 
           <div className="hero__icon">
@@ -29,9 +28,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hero__image__box">
-          <img className="hero__img" src={work} alt="hero-img" />
-        </div>
+        <HeroCss />
       </div>
 
       <HeroSvg />
@@ -43,13 +40,7 @@ const Wrapper = styled.section`
   display: flex;
   min-height: 90vh;
   position: relative;
-  background-color: var(--color-pink);
-  background-image: linear-gradient(
-    0deg,
-    var(--color-pink) 0%,
-    var(--color-blue) 100%
-  );
-
+  background-color: #FFAF01;
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -60,41 +51,32 @@ const Wrapper = styled.section`
     max-width: 1200px;
 
     .hero__info {
-      margin-left:4rem;
+      margin-left: 4rem;
       .hero__title {
         font-size: var(--font-giant);
-        color: var(--color-darkblue);
       }
 
       .hero__text {
         font-size: var(--font-medium);
         margin: 2rem 0;
-        line-height:3rem;
+        line-height: 3rem;
       }
 
       .hero__icon {
         .hero__btn {
-          background-color: var(--color-darkblue);
-          border: 1px solid var(--color-darkblue);
+          background-color: #028042;
+          border: 1px solid #028042;
           color: var(--color-white);
           font-size: var(--font-medium);
           padding: 8px 16px;
           border-radius: var(--pixels-ten);
           transition: 0.3s linear;
           &:hover {
-            color: var(--color-darkblue);
+            color: #028042;
             background-color: var(--color-white);
             border: 1px solid transparent;
           }
         }
-      }
-    }
-
-    .hero__image__box {
-      text-align: center;
-      .hero__img {
-        width: 100%;
-        animation: 3s linear imageBreath infinite;
       }
     }
   }
@@ -120,13 +102,6 @@ const Wrapper = styled.section`
         }
         .hero__icon {
           text-align: center;
-        }
-      }
-
-      .hero__image__box {
-        text-align: right;
-        .hero__img {
-          width: 300px;
         }
       }
     }
