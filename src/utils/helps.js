@@ -7,6 +7,7 @@ import image6 from "../images/6.png";
 
 import shopmobile from "../images/shopmobile.png";
 import dreammobile from "../images/dreammobile.png";
+import metaSite from "../images/metasite.png";
 
 import { FaGithub } from "react-icons/fa";
 import { SiCodesandbox, SiFreecodecamp, SiNotion } from "react-icons/si";
@@ -48,7 +49,7 @@ const siteList = [
       "검색창에 웹사이트를 검색하면 사이트가 가지고 있는 Meta tags 들에 대한 정보를 보여줍니다. promptapi 를 사용하여 meta tags 에 대한 정보(title , image , description)를 받아와 보여줍니다. 왜 meta tags 를 사용해야 하는지 이해했습니다. ",
     tech: ["React JS", "styled-components", "promptapi"],
     github: "https://github.com/GunThatIsMyName/meta-tags",
-    image: dreammobile,
+    image: metaSite,
   },
 ];
 

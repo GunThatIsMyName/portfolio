@@ -76,9 +76,9 @@ button {
 .live-demo {
   background-image: linear-gradient(
     to right,
-    #ff6e7f 0%,
-    #bfe9ff 51%,
-    #ff6e7f 100%
+    hsl(48, 84%, 85%) 0%,
+    #99BE84 51%,
+    #F9EDBB 100%
   );
   margin: 10px;
   padding: 15px 45px;
@@ -86,14 +86,14 @@ button {
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
+  color: red;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
 }
 .live-demo:hover {
   background-position: right center; /* change the direction of the change here */
-  color: #fff;
+  color: black;
   text-decoration: none;
 }
 
@@ -158,7 +158,7 @@ button {
       height: 127px;
     }
     .about__wave .shape-fill {
-      fill: #E6D8FF;
+      fill: #6CA24Cb6;
     }
 
     /* skills section svg */
@@ -178,7 +178,7 @@ button {
       height: 93px;
     }
     .Skills__waves .shape-fill {
-      fill: #fff6f9;
+      fill: #F9EDBB;
     }
 
     /* project section svg  */

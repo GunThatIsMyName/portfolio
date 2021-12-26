@@ -70,13 +70,6 @@ const Wrapper = styled.section`
   display: flex;
   align-items: center;
   position: relative;
-
-  background-color: var(--color-white);
-  background-image: linear-gradient(
-    0deg,
-    var(--color-ligthpink) 0%,
-    var(--color-white) 100%
-  );
   .about__section {
     max-width: 1200px;
     margin: auto;
@@ -109,8 +102,8 @@ const Wrapper = styled.section`
           font-size: 1.2rem;
           margin-bottom: 1rem;
           &.active {
-            color: #EDB504;
-            border-left: 4px solid #EDB504;
+            color: #6CA24C;
+            border-left: 4px solid #6CA24C;
           }
         }
       }

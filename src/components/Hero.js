@@ -38,9 +38,8 @@ const Hero = () => {
 
 const Wrapper = styled.section`
   display: flex;
-  min-height: 90vh;
-  position: relative;
-  background-color: #FFAF01;
+  min-height: 90vh;background: rgb(255,224,129);
+background: radial-gradient(circle, rgba(255,224,129,0.7763480392156863) 0%, rgba(243,219,123,0.49343487394957986) 31%, rgba(182,194,96,1) 100%, rgba(108,162,76,1) 100%, rgba(2,128,66,1) 100%);
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;

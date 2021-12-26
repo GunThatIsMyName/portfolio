@@ -7,7 +7,6 @@ function SkillItem({ id, skill, image }) {
       <div className="skill__image">
         <img src={image} alt={skill} className="skill__img" />
       </div>
-
       <div className="skill__name">
         <p>{skill}</p>
       </div>
@@ -22,6 +21,7 @@ const Wrapper = styled.article`
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
   cursor: pointer;
+  transition:0.1s linear;
   .skill__image {
     width: inherit;
     height: inherit;
@@ -31,6 +31,7 @@ const Wrapper = styled.article`
       width: inherit;
       height: inherit;
       object-fit: cover;
+      background-color: white;
     }
   }
   .skill__name {

@@ -69,7 +69,7 @@ function Projects() {
 
 const Wrapper = styled.section`
   min-height: 80vh;
-  background: #fff6f9;
+  background: #F9EDBB;
   padding-top: 2rem;
   position: relative;
   .project {
