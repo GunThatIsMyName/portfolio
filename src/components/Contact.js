@@ -54,7 +54,7 @@ const Wrapper = styled.section`
   }
   .contact__box {
     margin: auto;
-    padding: 2rem 3rem;
+    /* padding: 2rem 3rem; */
     max-width: 1200px;
     .contact__item{
         display:flex;

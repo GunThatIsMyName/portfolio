@@ -20,9 +20,9 @@ function Skills() {
         </div>
 
         <div className="skill__extra">
-          <h3 className="skill__add">현재 공부중인것:</h3>
+          <h3 className="skill__add">Currently working on:</h3>
           <p>
-            바닐라 자바스크립트 의 실력을 더 향상 시키기 위해 Data structure &
+            자바스크립트 의 실력을 더 향상 시키기 위해 Data structure &
             algorithms 을 공부하고 있습니다.
           </p>
         </div>
@@ -36,7 +36,7 @@ function Skills() {
 
 const Wrapper = styled.div`
   min-height: 70vh;
-  background: #6ca24cb6;
+  background: #8cb02e;
   position: relative;
   padding-top: 6rem;
   padding-bottom: 8rem;
@@ -55,14 +55,19 @@ const Wrapper = styled.div`
     margin: auto;
 
     .skill__list {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 4rem;
+      align-items: center;
+      transition: 0.3s linear;
       display: grid;
+      grid-template-columns: repeat(6, 1fr);
       text-align: center;
       place-items: center;
-      grid-template-columns: repeat(6, 1fr);
+      /* 
       grid-gap: 1rem;
       text-align: center;
-      transition: 0.3s linear;
-      margin-bottom: 4rem;
+      margin-bottom: 4rem; */
     }
     .skill__extra {
       max-width: 1000px;
@@ -76,12 +81,11 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 1024px) {
     .skill {
+      max-width: 80%;
       .skill__subtitle {
-        max-width: 80%;
       }
       .skill__list {
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
         row-gap: 4rem;
         margin-bottom: 8rem;
       }
@@ -91,14 +95,14 @@ const Wrapper = styled.div`
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     .skill {
-      padding: 1rem;
-      text-align: center;
       .skill__list {
         margin-top: 2rem;
         grid-gap: 1rem;
         row-gap: 3rem;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }

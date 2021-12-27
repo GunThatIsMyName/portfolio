@@ -101,7 +101,6 @@ background-color:var(--color-white);
   }
   @media screen and (max-width: 768px) {
     font-size: var(--font-normal);
-    background-color: var(--color-white);
     .navbar {
       display: flex;
       flex-direction: column;

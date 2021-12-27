@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import HeroSvg from "./shapebox/HeroSvg";
 import HeroCss from "./HeroCss";
+import HeroQuotes from "./HeroQuotes";
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
       <div className="hero">
         <div className="hero__info">
           <div className="hero__title">
-            <h1>실패를 발판삼아 배우는</h1>
+            <HeroQuotes />
             <h3>개발자.</h3>
           </div>
 
@@ -18,8 +19,6 @@ const Hero = () => {
             어제보다 성장하는 <strong>이준현</strong> 입니다.
             <br />
             배움의 즐거움을 느끼며 <strong>성장</strong> 하고 있습니다.
-            <br />
-            실패를 통해 더 좋은 다음 <strong>기회</strong>를 잡는 이준현 입니다.
             <br />
           </p>
 
@@ -38,8 +37,8 @@ const Hero = () => {
 
 const Wrapper = styled.section`
   display: flex;
-  min-height: 90vh;background: rgb(255,224,129);
-background: radial-gradient(circle, rgba(255,224,129,0.7763480392156863) 0%, rgba(243,219,123,0.49343487394957986) 31%, rgba(182,194,96,1) 100%, rgba(108,162,76,1) 100%, rgba(2,128,66,1) 100%);
+  min-height: 90vh;
+  background:#EDB504;
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;

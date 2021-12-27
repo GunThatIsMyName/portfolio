@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { aboutList } from "../utils/helps";
-import AboutSvg from "./shapebox/AboutSvg";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -60,13 +59,12 @@ const About = () => {
         </div>
       </div>
 
-      <AboutSvg />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  min-height: 90vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -102,8 +100,8 @@ const Wrapper = styled.section`
           font-size: 1.2rem;
           margin-bottom: 1rem;
           &.active {
-            color: #6CA24C;
-            border-left: 4px solid #6CA24C;
+            color: #EDB504;
+            border-left: 4px solid #EDB504;
           }
         }
       }

@@ -74,6 +74,19 @@ const Wraper = styled.div`
       transform: scale(0.7);
     }
   }
+
+  @media screen and (max-width:991px){
+    #heroItem{ 
+      width: 350px;
+      height: 350px;
+    }
+  }
+  @media screen and (max-width:480px){
+    #heroItem{ 
+      width: 200px;
+      height: 200px;
+    }
+  }
 `;
 
 export default HeroCss;

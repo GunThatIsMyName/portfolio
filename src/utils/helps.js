@@ -7,7 +7,7 @@ import image6 from "../images/6.png";
 
 import shopmobile from "../images/shopmobile.png";
 import dreammobile from "../images/dreammobile.png";
-import metaSite from "../images/metasite.png";
+import metamobile from "../images/metamobile.png";
 
 import { FaGithub } from "react-icons/fa";
 import { SiCodesandbox, SiFreecodecamp, SiNotion } from "react-icons/si";
@@ -44,12 +44,12 @@ const siteList = [
     id: 3,
     live: "https://aboutmeta.netlify.app/",
     name: "About meta",
-    type: "meta tags site",
+    type: "메타 태그 사이트",
     description:
-      "검색창에 웹사이트를 검색하면 사이트가 가지고 있는 Meta tags 들에 대한 정보를 보여줍니다. promptapi 를 사용하여 meta tags 에 대한 정보(title , image , description)를 받아와 보여줍니다. 왜 meta tags 를 사용해야 하는지 이해했습니다. ",
+      "검색창에 웹사이트를 검색하면 사이트가 가지고 있는 Meta tags 들에 대한 정보를 보여줍니다. promptapi 를 사용하여 meta tags 에 대한 정보(title , image , description)를 받아와 보여줍니다. Meta tags 의 역할 과  검색 엔진의 도움 되는 정보를 담을수 있는 것을 배웠습니다",
     tech: ["React JS", "styled-components", "promptapi"],
     github: "https://github.com/GunThatIsMyName/meta-tags",
-    image: metaSite,
+    image: metamobile,
   },
 ];
 
@@ -89,7 +89,7 @@ const aboutList = [
     id: 1,
     question: "소개를 해드릴게요",
     answer:
-      "독학으로 공부를 하고있는 이준현입니다. ",
+      "어제의 실수를 기억하고 보완해서 더 좋은 미래를 만드는 이준현 입니다. ",
   },
   {
     id: 2,

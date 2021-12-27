@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { siteList } from "../utils/helps";
+import GradientBtn from "./GradientBtn";
 import ProjectSvg from "./shapebox/ProjectSvg";
 
 function Projects() {
@@ -10,7 +11,8 @@ function Projects() {
         <h4 className="project__title">Projects</h4>
 
         {siteList.map((site) => {
-          const { id, live, name, description,type, github, image, tech } = site;
+          const { id, live, name, description, type, github, image, tech } =
+            site;
           return (
             <div className="project__box" key={id}>
               <div className="project__info">
@@ -19,24 +21,8 @@ function Projects() {
                 <p>{description}</p>
 
                 <div className="project__btns">
-                  <a
-                    style={{ backgroundColor: "red" }}
-                    className="live-demo"
-                    href={live}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    style={{ backgroundColor: "teal" }}
-                    className="source-code"
-                    href={github}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    source code
-                  </a>
+                  <GradientBtn href={live} children={"Live Demo"} name={"live-demo"} />
+                  <GradientBtn href={github} children={"Source Code"} name={"source-code"}/>
                 </div>
 
                 <ul className="project__tech__list">
@@ -62,14 +48,13 @@ function Projects() {
       </div>
 
       <ProjectSvg />
-
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
   min-height: 80vh;
-  background: #F9EDBB;
+  background: #f9edbb;
   padding-top: 2rem;
   position: relative;
   .project {
@@ -105,9 +90,9 @@ const Wrapper = styled.section`
           font-size: var(--font-large);
           margin-bottom: 0.3rem;
         }
-        .project__site{
-          color:#C0C0C0;
-          margin-bottom:1rem;
+        .project__site {
+          color: #c0c0c0;
+          margin-bottom: 1rem;
         }
         .project__btns {
           margin: 1rem 0;

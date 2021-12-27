@@ -73,53 +73,7 @@ button {
   background-color: transparent;
 }
 
-.live-demo {
-  background-image: linear-gradient(
-    to right,
-    hsl(48, 84%, 85%) 0%,
-    #99BE84 51%,
-    #F9EDBB 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: red;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-.live-demo:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: black;
-  text-decoration: none;
-}
 
-.source-code {
-  background-image: linear-gradient(
-    to right,
-    #1f1c2c 0%,
-    #928dab 51%,
-    #1f1c2c 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-.source-code:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
 
 /* shape divider css */
 
@@ -140,25 +94,6 @@ button {
     }
     .hero__wave .shape-fill {
       fill: var(--color-white);
-    }
-    /* about section svg */
-
-    .about__wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-    }
-    .about__wave svg {
-      position: relative;
-      display: block;
-      width: calc(169% + 1.3px);
-      height: 127px;
-    }
-    .about__wave .shape-fill {
-      fill: #6CA24Cb6;
     }
 
     /* skills section svg */
