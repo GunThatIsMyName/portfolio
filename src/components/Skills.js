@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { SkillItem } from ".";
+import { SkillItem, SkillsSvg } from ".";
 import { skillsList } from "../utils/helps";
-import SkillsSvg from "./shapebox/SkillsSvg";
 
 function Skills() {
   return (
     <Wrapper id="skills">
+
       <section className="skill">
+
         <h1 className="skill__title">skills</h1>
         <p className="skill__description">
-          아래의 기술들을 사용해서 웹사이트를 만들고 있습니다.
+          사용 할수 있는 기술들 입니다.
         </p>
+
         <div className="skill__list">
           {skillsList.map((item) => {
             const { id, skill, image } = item;
@@ -36,7 +38,7 @@ function Skills() {
 
 const Wrapper = styled.div`
   min-height: 70vh;
-  background: #8cb02e;
+  background: var(--color-nurun);
   position: relative;
   padding-top: 6rem;
   padding-bottom: 8rem;
@@ -64,10 +66,6 @@ const Wrapper = styled.div`
       grid-template-columns: repeat(6, 1fr);
       text-align: center;
       place-items: center;
-      /* 
-      grid-gap: 1rem;
-      text-align: center;
-      margin-bottom: 4rem; */
     }
     .skill__extra {
       max-width: 1000px;

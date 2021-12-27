@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-const words = ["배움을 배고파 하는", "어제 보다 성장하는","실패를 통해 성장하는"];
+const words = [
+  "배움을 배고파 하는",
+  "어제 보다 성장하는",
+  "실패를 통해 성장하는",
+];
 
 function HeroQuotes() {
   const [index, setIndex] = useState(0);
@@ -8,20 +12,13 @@ function HeroQuotes() {
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
 
-  useEffect(() => {
-    const timeout2 = setTimeout(() => {
-      setBlink((prev) => !prev);
-    }, 700);
-    return () => clearTimeout(timeout2);
-  }, [blink]);
-
   const loop = (timeout) => {
     if (index === words.length) {
-        return;
+      return;
     }
 
-    if(index === words.length -1 && subIndex === words[index].length +1){
-        return clearTimeout(timeout);
+    if (index === words.length - 1 && subIndex === words[index].length + 1) {
+      return clearTimeout(timeout);
     }
 
     if (
@@ -35,23 +32,35 @@ function HeroQuotes() {
 
     if (subIndex === 0 && reverse) {
       setReverse(false);
-      setIndex((prev) =>prev + 1);
-      return ;
+      setIndex((prev) => prev + 1);
+      return;
     }
   };
 
+  useEffect(() => {
+    let timeout2 = setTimeout(() => {
+      setBlink((prev) => !prev);
+    }, 700);
+
+    if (index === words.length - 1 && subIndex === words[index].length + 1) {
+      return clearTimeout(timeout2);
+    }
+
+    return () => clearTimeout(timeout2);
+    // eslint-disable-next-line
+  }, [blink]);
 
   useEffect(() => {
     let timeout;
 
     timeout = setTimeout(() => {
-        setSubIndex((prev) => prev + (reverse ? -1 : 1));
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
     }, 200);
 
     loop(timeout);
 
     return () => clearTimeout(timeout);
-// eslint-disable-next-line
+    // eslint-disable-next-line
   }, [subIndex, index, reverse]);
 
   return <h1>{`${words[index].substring(0, subIndex)}${blink ? "|" : ""}`}</h1>;

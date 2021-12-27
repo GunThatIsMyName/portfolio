@@ -6,5 +6,12 @@ import Navbar from "./Navbar";
 import Projects from "./Projects";
 import SkillItem from "./SkillItem";
 import Skills from "./Skills";
+import AboutBox from "./AboutBox";
+import GradientBtn from "./GradientBtn";
+import ProjectsBox from "./ProjectsBox";
+import ContactEtc from "./ContactEtc";
 
-export { About, Contact, Hero, Info, Navbar, Projects, SkillItem, Skills };
+import SkillsSvg from "./shapebox/SkillsSvg";
+import ProjectSvg from "./shapebox/ProjectSvg";
+
+export { ContactEtc,ProjectsBox,ProjectSvg,GradientBtn,AboutBox,SkillsSvg,About, Contact, Hero, Info, Navbar, Projects, SkillItem, Skills };
