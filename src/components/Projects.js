@@ -11,7 +11,7 @@ function Projects() {
 
         {siteList.map((site) => {
           return (
-            <ProjectsBox  {...site}/>
+            <ProjectsBox key={site.id} {...site}/>
           );
         })}
       </div>

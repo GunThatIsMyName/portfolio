@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="hero__info">
           <div className="hero__title">
             <HeroQuotes />
-            <h3>개발자.</h3>
+            <h3>이준현.</h3>
           </div>
 
           <p className="hero__text">
@@ -38,7 +38,7 @@ const Hero = () => {
 const Wrapper = styled.section`
   display: flex;
   min-height: 90vh;
-  background:#EDB504;
+  background: #edb504;
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;

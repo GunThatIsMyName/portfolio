@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-const words = [
-  "배움을 배고파 하는",
-  "어제 보다 성장하는",
-  "실패를 통해 성장하는",
-];
+import { words } from "../utils/helps";
 
 function HeroQuotes() {
   const [index, setIndex] = useState(0);

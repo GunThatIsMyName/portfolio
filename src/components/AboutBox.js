@@ -29,7 +29,7 @@ function AboutBox({ aboutList, listIndex, setIndex, answer }) {
 }
 
 const AboutBoxWrapper = styled.div`
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
   display: flex;
   gap: 4rem;
   .about__btns {

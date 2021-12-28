@@ -15,7 +15,7 @@ import { SiCodesandbox, SiFreecodecamp, SiNotion } from "react-icons/si";
 const siteList = [
   {
     id: 1,
-    live: "https://yello-sneakers.netlify.app/",
+    live: "https://sneakers-site.netlify.app/",
     name: "e-commerce  (나이키 신발 플랫폼)",
     type: "Serverless Functions",
     description:
@@ -89,7 +89,7 @@ const aboutList = [
     id: 1,
     question: "소개를 해드릴게요",
     answer:
-      "어제의 실수를 기억하고 보완해서 더 좋은 미래를 만드는 이준현 입니다. ",
+      "어제의 실수를 기억하고 보완해서 더 좋은 미래를 만드는 이준현 입니다. 성장 배움 에 목말라 있습니다. 성장 하는 순간이 삶의 전부 입니다",
   },
   {
     id: 2,
@@ -101,7 +101,7 @@ const aboutList = [
     id: 3,
     question: "왜 코딩을 배웠나요?",
     answer:
-      "호주 워킹홀리데이 중에 농장에서 일을 하다가 코딩을 처음 접했습니다.  농장 일이 끝나면 하루 1시간씩 HTML, CSS 공부를 했습니다.  ,   ",
+      "💥 호주 워킹홀리데이 중에 농장에서 일을 하다가 코딩을 처음 접했습니다.  농장 일이 끝나면 하루 1시간씩 HTML, CSS 공부를 했습니다.  ,   ",
   },
   {
     id: 4,
@@ -119,5 +119,11 @@ const navList = [
   { id: 5, name: "contact", path: "/contact" },
 ];
 
-export { siteList, skillsList, infoList, aboutList ,navList};
+const words = [
+  "배움을 배고파 하는",
+  "어제 보다 성장하는",
+  "실패를 통해 발전하는",
+];
+
+export { siteList, skillsList, infoList, aboutList ,navList,words};
 

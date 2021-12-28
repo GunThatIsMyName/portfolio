@@ -30,7 +30,7 @@ function ProjectsBox({
 
         <ul className="project__tech__list">
           {tech.map((item) => {
-            return <li key={item}>{item}</li>;
+            return <li key={item}> {item}</li>;
           })}
         </ul>
       </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AboutBox } from ".";
 import { aboutList } from "../utils/helps";
-
+import AboutJourney from "./AboutJourney";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -27,7 +27,7 @@ const About = () => {
         <h4 className="about__title">about</h4>
 
         <div className="about__header">
-          <h3 className="about__header__title">내일이 더 기대되는 준현이.</h3>
+          <h3 className="about__header__title">JunHyun's Journey</h3>
         </div>
 
         <AboutBox
@@ -37,15 +37,15 @@ const About = () => {
           setIndex={setIndex}
         />
 
+        <AboutJourney listIndex={listIndex} />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
-  align-items: center;
   position: relative;
   .about__section {
     max-width: 1200px;
