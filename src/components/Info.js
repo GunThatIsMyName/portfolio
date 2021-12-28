@@ -4,6 +4,7 @@ import { infoList } from "../utils/helps";
 
 function Info() {
   const [docking, setDocking] = useState(false);
+  const [size, setSize] = useState(false);
 
   const handleScroll = () => {
     const wholePageY = document.documentElement.scrollHeight - 100;
@@ -16,32 +17,29 @@ function Info() {
     }
   };
 
-  const handleResize=()=>{
-    const {innerWidth}=window;
-    if(innerWidth<768){
-      setDocking(true);
-    }else{
-      setDocking(false);
+  const handleResize = () => {
+    const { innerWidth } = window;
+    if (innerWidth < 768) {
+      setSize(true);
+    } else {
+      setSize(false);
     }
-  }
+  };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
     // eslint-disable-next-line
   }, []);
 
-  useEffect(()=>{
-    window.addEventListener("resize",handleResize);
-    return ()=>window.removeEventListener("resize",handleResize);
-// eslint-disable-next-line
-  },[])
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+    // eslint-disable-next-line
+  }, []);
 
   console.log(docking);
   return (
-    <InfoWrapper
-      className={`info ${docking ? "docking" : "none-docking"}`}
-      docking={docking}
-    >
+    <InfoWrapper className={`info ${docking ? "docking" : "none-docking"}`}>
       <div className="box">
         {infoList.map((item) => {
           const { id, icon, link, name } = item;
@@ -61,7 +59,7 @@ function Info() {
 
 const InfoWrapper = styled.ul`
   position: fixed;
-  z-index: 9;
+  z-index: 99;
   bottom: 0;
   left: 2rem;
   transition: 0.3s linear;
@@ -78,9 +76,9 @@ const InfoWrapper = styled.ul`
     }
     li {
       text-align: center;
-      h3{
+      h3 {
         margin-bottom: 10px;
-        text-transform:capitalize;
+        text-transform: capitalize;
       }
       &:last-child {
         &::after {
@@ -111,14 +109,35 @@ const InfoWrapper = styled.ul`
     }
   }
   @media screen and (max-width: 768px) {
-    /* display: none; */
     &.docking {
-      bottom:30px;
-      .box{
-        display:grid;
-        grid-template-columns:1fr;
-        li{
-          font-size:1.4rem;
+      bottom: 30px;
+      .box {
+        display: grid;
+        grid-template-columns: 1fr;
+        background: none;
+        li {
+          display:flex;
+          justify-content:center;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    width: 100%;
+    left: 0;
+    .box {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--color-skin);
+      li {
+        margin:3px 0;
+        h3{margin-right:5px;}
+        &:not(:last-child) {
+          margin-bottom: none;
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
         }
       }
     }
@@ -126,52 +145,3 @@ const InfoWrapper = styled.ul`
 `;
 
 export default Info;
-
-// const InfoWrapper = styled.ul`
-//   position: fixed;
-//   z-index: 9;
-//   &.docking {
-//     width: 100%;
-//     bottom: 100px;
-//     transition: 0.3s linear;
-//   &.none-docking {
-//     background-color:teal;
-//       .box{
-//         left: 2rem;
-//         bottom: 0;
-
-//       }
-//     }
-//     .box {
-//       margin: auto;
-//       justify-content: space-around;
-//       display: flex;
-//       max-width: 1200px;
-//       width: 100%;
-//       max-width: 1200px;
-//     }
-//     li {
-//       font-size: 2rem;
-//       transition: 0.2s linear;
-//       text-align: center;
-//       cursor: pointer;
-//       h3 {
-//         margin-bottom: 10px;
-//         text-transform: uppercase;
-//       }
-//       &:not(:last-child) {
-//         margin-bottom: 1rem;
-//       }
-//       &:hover {
-//         transform: translateY(5px);
-//         svg {
-//           transform: scale(1.4);
-//           transition: 0.3s linear;
-//         }
-//       }
-//     }
-//   }
-//   @media screen and (max-width: 768px) {
-//     display: none;
-//   }
-// `;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HeroImage, HeroQuotes, HeroSvg } from "..";
+import { HeroImage, HeroQuotes } from "..";
 
 
 const Hero = () => {
@@ -28,8 +28,6 @@ const Hero = () => {
         <HeroImage />
       </div>
 
-      {/* Shape SVG */}
-      <HeroSvg />
     </Wrapper>
   );
 };
@@ -48,7 +46,6 @@ const Wrapper = styled.section`
     max-width: 1200px;
 
     .hero__info {
-      margin-left: 4rem;
       .hero__title {
         font-size: var(--font-giant);
       }

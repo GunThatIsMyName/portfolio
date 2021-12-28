@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { SiKakaotalk } from "react-icons/si";
-import { ContactEtc } from ".";
 
 function Contact() {
   return (
@@ -27,7 +26,6 @@ function Contact() {
           <h3 className="contact__mykakao">dlwnsgus96</h3>
         </div>
 
-        {/* <ContactEtc /> */}
       </div>
       </section>
     </Wrapper>
@@ -60,6 +58,12 @@ const Wrapper = styled.section`
       svg {
         font-size: 2rem;
       }
+    }
+  }
+
+  @media screen and (max-width:768px){
+    .contact__title{
+      margin-top:1rem;
     }
   }
 `;
