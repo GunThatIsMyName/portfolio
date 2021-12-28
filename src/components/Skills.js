@@ -6,13 +6,9 @@ import { skillsList } from "../utils/helps";
 function Skills() {
   return (
     <Wrapper id="skills">
-
       <section className="skill">
-
         <h1 className="skill__title">skills</h1>
-        <p className="skill__description">
-          사용 할수 있는 기술들 입니다.
-        </p>
+        <p className="skill__description">사용 할수 있는 기술들 입니다.</p>
 
         <div className="skill__list">
           {skillsList.map((item) => {
@@ -38,7 +34,6 @@ function Skills() {
 
 const Wrapper = styled.div`
   min-height: 70vh;
-  background: var(--color-nurun);
   position: relative;
   padding-top: 6rem;
   padding-bottom: 8rem;
@@ -59,7 +54,7 @@ const Wrapper = styled.div`
     .skill__list {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 4rem;
+      margin-bottom: 8rem;
       align-items: center;
       transition: 0.3s linear;
       display: grid;
@@ -71,25 +66,22 @@ const Wrapper = styled.div`
       max-width: 1000px;
       margin: auto;
       font-size: 1.4rem;
+      text-align: center;
       .skill__add {
         margin-bottom: 5px;
       }
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1300px) {
     .skill {
       max-width: 80%;
-      .skill__subtitle {
-      }
       .skill__list {
         grid-template-columns: repeat(4, 1fr);
         row-gap: 4rem;
-        margin-bottom: 8rem;
       }
       .skill__extra {
         margin: 1rem 2rem;
-        text-align: center;
       }
     }
   }

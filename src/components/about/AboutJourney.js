@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Goal from "./Goal";
-import RunningMan from "./RunningMan";
+import { Goal, RunningMan } from "..";
 
 function AboutJourney({ listIndex }) {
   return (

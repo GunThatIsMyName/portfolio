@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import heroImage from "../images/heroImage.png";
+import heroImage from "../../images/heroImage.png";
 
-function HeroCss() {
+function HeroImage() {
   return (
     <Wraper image={heroImage}>
       <div id="heroItem"></div>
@@ -89,4 +89,4 @@ const Wraper = styled.div`
   }
 `;
 
-export default HeroCss;
+export default HeroImage;

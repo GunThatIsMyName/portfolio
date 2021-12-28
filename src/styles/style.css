@@ -24,7 +24,6 @@ font-family: 'Nanum Gothic', sans-serif;
   --color-red: #eb573b;
   --color-red: #d64b38;
 
-
   /* font size */
 
   --font-normal: 1rem;
@@ -36,8 +35,6 @@ font-family: 'Nanum Gothic', sans-serif;
   /* pixels size */
   --pixels-ten: 10px;
 }
-
-
 
 /* global css */
 
@@ -80,69 +77,67 @@ button {
   background-color: transparent;
 }
 
-
-
 /* shape divider css */
 
-    /*  hero section svg */
-    .hero__wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-    }
-    .hero__wave svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 235px;
-    }
-    .hero__wave .shape-fill {
-      fill: var(--color-white);
-    }
+/*  hero section svg */
+.hero__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.hero__wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 235px;
+}
+.hero__wave .shape-fill {
+  fill: var(--color-white);
+}
 
-    /* skills section svg */
-    .Skills__waves {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      transform: rotate(180deg);
-    }
-    .Skills__waves svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 93px;
-    }
-    .Skills__waves .shape-fill {
-      fill: #F9EDBB;
-    }
+/* skills section svg */
+.Skills__waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.Skills__waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 93px;
+}
+.Skills__waves .shape-fill {
+  fill: #fcf7e1;
+}
 
-    /* project section svg  */
-    .project__wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      transform: rotate(180deg);
-    }
+/* project section svg  */
+.project__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
-    .project__wave svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 83px;
-    }
+.project__wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 83px;
+}
 
-    .project__wave .shape-fill {
-      fill: #fff;
-    }
+.project__wave .shape-fill {
+  fill: #fff;
+}
 
 /*  */

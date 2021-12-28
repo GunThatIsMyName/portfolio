@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { HeroImage, HeroQuotes, HeroSvg } from "..";
 
-import HeroSvg from "./shapebox/HeroSvg";
-import HeroCss from "./HeroCss";
-import HeroQuotes from "./HeroQuotes";
 
 const Hero = () => {
   return (
@@ -27,9 +25,10 @@ const Hero = () => {
           </div>
         </div>
 
-        <HeroCss />
+        <HeroImage />
       </div>
 
+      {/* Shape SVG */}
       <HeroSvg />
     </Wrapper>
   );

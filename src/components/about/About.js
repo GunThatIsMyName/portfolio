@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { AboutBox, AboutJourney } from "..";
+import { aboutList } from "../../utils/helps";
 import styled from "styled-components";
-import { AboutBox } from ".";
-import { aboutList } from "../utils/helps";
-import AboutJourney from "./AboutJourney";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -20,7 +19,6 @@ const About = () => {
   }
 
   const { answer } = info[listIndex];
-
   return (
     <Wrapper id="about">
       <div className="about__section">

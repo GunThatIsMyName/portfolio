@@ -21,12 +21,12 @@ function Navbar() {
     });
   };
 
-  const handleTop=()=>{
+  const handleTop = () => {
     window.scroll({
-      left:0,
-      top:0
-    })
-  }
+      left: 0,
+      top: 0,
+    });
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -66,13 +66,13 @@ function Navbar() {
 }
 
 const Wrapper = styled.header`
-background-color:var(--color-white);
+  background-color: var(--color-white);
   font-size: var(--font-medium);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 99;
   .navbar {
     text-transform: uppercase;
     margin: 0 2rem;
@@ -81,7 +81,7 @@ background-color:var(--color-white);
     align-items: center;
     .navbar__icons {
       img {
-        height:50px;
+        height: 50px;
         cursor: pointer;
       }
       .navbar__icon {

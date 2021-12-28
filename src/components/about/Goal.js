@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 function Goal() {
   return (
-    <Wrapper class="contain-flag">
-      <div class="pole"></div>
-      <div class="flag">Goal</div>
+    <Wrapper>
+      <div className="pole"></div>
+      <div className="flag">Goal</div>
     </Wrapper>
   );
 }
@@ -35,7 +35,6 @@ const Wrapper = styled.div`
       height: 20px;
     }
   }
-  // Flag part in front
   .flag {
     position: absolute;
     display: grid;

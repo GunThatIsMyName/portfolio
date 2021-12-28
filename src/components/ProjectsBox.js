@@ -60,6 +60,9 @@ const BoxWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   margin-bottom: 2rem;
+  &:last-child{
+    margin-bottom:10rem;
+  }
   .project__info {
     display: flex;
     flex-direction: column;

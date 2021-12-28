@@ -64,12 +64,12 @@ const skillsList = [
 
 const infoList = [
   { id: 1,name:"github", icon: <FaGithub />, link: "https://github.com/GunThatIsMyName" },
-  {
-    id: 2,
-    icon: <SiNotion />,
-    name:"notion",
-    link: "https://adaptive-otter-f22.notion.site/adff99a2dff847c19218da6de56bc230",
-  },
+  // {
+  //   id: 2,
+  //   icon: <SiNotion />,
+  //   name:"Notion",
+  //   link: "https://adaptive-otter-f22.notion.site/adff99a2dff847c19218da6de56bc230",
+  // },
   {
     id: 3,
     icon: <SiCodesandbox />,

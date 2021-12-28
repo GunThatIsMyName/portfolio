@@ -39,13 +39,14 @@ const RunningCss = styled.div`
   --cloth-light-color: #79af87;
   --cloth-dark-color: #007759;
   --cloth-darker-color: #028042;
+
   width: 200px;
   height: 320px;
   left: ${(props) => props.order * 25}%;
   position: absolute;
   transition: 0.3s linear;
   top: -230px;
-  z-index: 99;
+  z-index: 9;
   transform: scale(0.5);
 
   .man {

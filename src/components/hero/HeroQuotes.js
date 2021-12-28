@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { words } from "../utils/helps";
+import { words } from "../../utils/helps";
 
 function HeroQuotes() {
   const [index, setIndex] = useState(0);

@@ -32,6 +32,7 @@ const Wrapper = styled.article`
       height: inherit;
       object-fit: cover;
       background-color: white;
+      border-radius:5px;
     }
   }
   .skill__name {
