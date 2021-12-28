@@ -7,7 +7,6 @@ import SkillItem from "./SkillItem";
 import Skills from "./Skills";
 import GradientBtn from "./GradientBtn";
 import ProjectsBox from "./ProjectsBox";
-import ContactEtc from "./ContactEtc";
 
 // ------  Hero Components ------ 
 
@@ -29,4 +28,4 @@ import SkillsSvg from "./shapebox/SkillsSvg";
 import ProjectSvg from "./shapebox/ProjectSvg";
 import HeroSvg from "./shapebox/HeroSvg";
 
-export {HeroQuotes,HeroImage,HeroSvg, AboutJourney,Goal,RunningMan,ContactEtc,ProjectsBox,ProjectSvg,GradientBtn,AboutBox,SkillsSvg,About, Contact, Hero, Info, Navbar, Projects, SkillItem, Skills };
+export {HeroQuotes,HeroImage,HeroSvg, AboutJourney,Goal,RunningMan,ProjectsBox,ProjectSvg,GradientBtn,AboutBox,SkillsSvg,About, Contact, Hero, Info, Navbar, Projects, SkillItem, Skills };

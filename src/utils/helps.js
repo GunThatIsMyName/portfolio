@@ -64,20 +64,14 @@ const skillsList = [
 
 const infoList = [
   { id: 1,name:"github", icon: <FaGithub />, link: "https://github.com/GunThatIsMyName" },
-  // {
-  //   id: 2,
-  //   icon: <SiNotion />,
-  //   name:"Notion",
-  //   link: "https://adaptive-otter-f22.notion.site/adff99a2dff847c19218da6de56bc230",
-  // },
   {
-    id: 3,
+    id: 2,
     icon: <SiCodesandbox />,
     name:"sandbox",
     link: "https://codesandbox.io/u/Jooning",
   },
   {
-    id: 4,
+    id: 3,
     icon: <SiFreecodecamp />,
     name:"freecodecamp",
     link: "https://www.freecodecamp.org/junhyunLee",
@@ -114,8 +108,8 @@ const aboutList = [
 const navList = [
   { id: 1, name: "home", path: "/" },
   { id: 2, name: "about", path: "/about" },
-  { id: 3, name: "skills", path: "/skills" },
-  { id: 4, name: "projects", path: "/projects" },
+  { id: 3, name: "projects", path: "/projects" },
+  { id: 4, name: "skills", path: "/skills" },
   { id: 5, name: "contact", path: "/contact" },
 ];
 

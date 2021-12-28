@@ -4,10 +4,9 @@ import { infoList } from "../utils/helps";
 
 function Info() {
   const [docking, setDocking] = useState(false);
-  const [size, setSize] = useState(false);
 
   const handleScroll = () => {
-    const wholePageY = document.documentElement.scrollHeight - 100;
+    const wholePageY = document.documentElement.scrollHeight - 30;
     let currentPage =
       document.documentElement.clientHeight + window.pageYOffset;
     if (currentPage > wholePageY) {
@@ -17,27 +16,12 @@ function Info() {
     }
   };
 
-  const handleResize = () => {
-    const { innerWidth } = window;
-    if (innerWidth < 768) {
-      setSize(true);
-    } else {
-      setSize(false);
-    }
-  };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
     // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-    // eslint-disable-next-line
-  }, []);
-
-  console.log(docking);
   return (
     <InfoWrapper className={`info ${docking ? "docking" : "none-docking"}`}>
       <div className="box">
@@ -119,6 +103,9 @@ const InfoWrapper = styled.ul`
           display:flex;
           justify-content:center;
           font-size: 1.4rem;
+          h3{
+            margin-bottom:0;
+          }
         }
       }
     }

@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700&display=swap");
 
-/* font family */
-/* 
-
-font-family: 'Archivo', sans-serif;
-font-family: 'Nanum Gothic', sans-serif; 
-*/
-
 /* Root style */
 
 :root {
@@ -77,26 +70,7 @@ button {
   background-color: transparent;
 }
 
-/* shape divider css */
-
-/*  hero section svg */
-.hero__wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-.hero__wave svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 235px;
-}
-.hero__wave .shape-fill {
-  fill: var(--color-white);
-}
+/* shape divider css  ------------ */
 
 /* skills section svg */
 .Skills__waves {
@@ -139,5 +113,3 @@ button {
 .project__wave .shape-fill {
   fill: #fff;
 }
-
-/*  */

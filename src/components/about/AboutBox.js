@@ -5,8 +5,9 @@ function AboutBox({ aboutList, listIndex, setIndex, answer }) {
   return (
     <AboutBoxWrapper className="about__box">
       <div className="about__btns">
+        
         {aboutList.map((item) => {
-          // change answer variable by click the button
+          // ---- ---- change answer variable by click the button
           const { id, question } = item;
           return (
             <button
@@ -21,7 +22,6 @@ function AboutBox({ aboutList, listIndex, setIndex, answer }) {
       </div>
 
       <div className="about__me">
-        {/* answer variable change by press the button*/}
         <p>{answer}</p>
       </div>
     </AboutBoxWrapper>
