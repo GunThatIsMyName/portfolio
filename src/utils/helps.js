@@ -10,7 +10,7 @@ import dreammobile from "../images/dreammobile.png";
 import metamobile from "../images/metamobile.png";
 
 import { FaGithub } from "react-icons/fa";
-import { SiCodesandbox, SiFreecodecamp, SiNotion } from "react-icons/si";
+import { SiCodesandbox, SiFreecodecamp } from "react-icons/si";
 
 const siteList = [
   {
