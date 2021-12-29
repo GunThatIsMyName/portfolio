@@ -42,7 +42,7 @@ const RunningCss = styled.div`
 
   width: 200px;
   height: 320px;
-  left: ${(props) => props.order * 25}%;
+  left: ${(props) => props.order * 33}%;
   position: absolute;
   transition: 0.3s linear;
   top: -230px;
@@ -141,7 +141,6 @@ const RunningCss = styled.div`
       background-color: #a6452a;
       border-radius: 8px 10px 21px 13px;
     }
-
   }
 
   /* A R M S ----------------------------------- */

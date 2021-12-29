@@ -16,7 +16,7 @@ const Hero = () => {
           <p className="hero__text">
             어제보다 성장하는 <strong>이준현</strong> 입니다.
             <br />
-            배움의 즐거움을 느끼며 <strong>성장</strong> 하고 있습니다.
+              배움을 향해 <strong>여행</strong> 하고 있습니다.
             <br />
           </p>
 

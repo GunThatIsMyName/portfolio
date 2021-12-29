@@ -25,7 +25,7 @@ const About = () => {
         <h4 className="about__title">about</h4>
 
         <div className="about__header">
-          <h3 className="about__header__title">JunHyun's Journey</h3>
+          <h3 className="about__header__title">달리는 준현이의 여정</h3>
         </div>
 
         <AboutBox

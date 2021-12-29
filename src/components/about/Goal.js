@@ -5,7 +5,7 @@ function Goal() {
   return (
     <Wrapper>
       <div className="pole"></div>
-      <div className="flag">Goal</div>
+      <div className="flag">배움</div>
     </Wrapper>
   );
 }
@@ -41,7 +41,6 @@ const Wrapper = styled.div`
     place-items: center;
     color: white;
     font-size: 1.5rem;
-    text-transform: uppercase;
     top: 8px;
     left: -80px;
     z-index: 10;
