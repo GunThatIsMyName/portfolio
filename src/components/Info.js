@@ -114,7 +114,7 @@ const InfoWrapper = styled.ul`
     .box {
       display: flex;
       justify-content: space-between;
-      background-color: var(--color-skin);
+      background-color: var(--color-white);
       li {
         margin:3px 0;
         h3{margin-right:5px;}

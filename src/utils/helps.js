@@ -63,17 +63,22 @@ const skillsList = [
 ];
 
 const infoList = [
-  { id: 1,name:"github", icon: <FaGithub />, link: "https://github.com/GunThatIsMyName" },
+  {
+    id: 1,
+    name: "github",
+    icon: <FaGithub />,
+    link: "https://github.com/GunThatIsMyName",
+  },
   {
     id: 2,
     icon: <SiCodesandbox />,
-    name:"sandbox",
+    name: "sandbox",
     link: "https://codesandbox.io/u/Jooning",
   },
   {
     id: 3,
     icon: <SiFreecodecamp />,
-    name:"freecodecamp",
+    name: "freecodecamp",
     link: "https://www.freecodecamp.org/junhyunLee",
   },
 ];
@@ -83,19 +88,17 @@ const aboutList = [
     id: 1,
     question: "소개를 해드릴게요",
     answer:
-      "배움을 향해 달리는 이준현 입니다. 주어진 일을 잘 해내면 열심히 살고 있다고 착각 하며 살았습니다. ",
+      "배움을 향해 달리는 이준현 입니다. 2년전 어렸을때 부터 꿈꿔왔던 워킹홀리데이를 호주에서 하게 되었습니다. 2년 동안 타지에 살면서 행복한 삶에 대해서 생각을 하게 되었습니다. 내가 행복해야하는 이유, 행복할수 있는 방법. 한국에 살고 있을땐 그저 주어진 일을 잘 해내면 열심히 살고 있다고 착각을 하며 살았습니다. 행복한 삶을 위해선 자기 성장이 있어야하고 성장을 위한 원동력에는 나의 행복이 포함되어 있어야 된다고 느꼈습니다. 현재는 성장을 위한 배움을 하고 있습니다. ",
   },
   {
     id: 2,
-    question: "강점은 무엇인가요 ?",
-    answer:
-      " 사교활동에 매우 적극적이며 본인이 직접 모임을 주도하고 적극적으로 대화의 주도권을 이끌어 나가는 힘이 있는 성격이다. 이것저것 논리적으로 계산을 하는데도 능숙하고 자기관리능력이 뛰어나 한마디로 유능한 성격의 대표주자이다. 회사를 비롯한 집단에서도 유능한 직원, 팀장, 재능 있는 구성원의 이미지를 많이 풍긴다.",
+    question: "강점은 무엇인가?",
+    answer: ` '늙은 사람은 앉아서 "이게 뭐야?" 라고 묻고 소년은 "이걸로 내가 무엇을 할수 있지?" 를 묻는다.' - 스티브 잡스 의 명언 처럼-  소년 처럼  새로운 아이디어 로 이걸로 내가 무엇을 할수 있을지  무엇을 배워야 하는지 상상을 하는 모습이 장점 입니다 `,
   },
   {
     id: 3,
-    question: "목표는 무엇인가요 ?",
-    answer:
-      `목표한 배움의 과정까지 도달 했을때 온라인 상에서 건축 설계,디자인  할수있는 서비스를 만드는것입니다. `,
+    question: "10년 뒤의 모습?",
+    answer: `목표한 배움의 과정까지 도달 했을때 온라인 상에서 건축 설계,디자인 할수있는 서비스를 만들고 싶습니다. 도면을 만들고 다른 유저에게 나의 디자인을 보낼수 있고 공유할수 있는 네트워크 서비스를 만드는 것입니다. `,
   },
 ];
 
@@ -113,5 +116,4 @@ const words = [
   "배움을 배고파 하는",
 ];
 
-export { siteList, skillsList, infoList, aboutList ,navList,words};
-
+export { siteList, skillsList, infoList, aboutList, navList, words };

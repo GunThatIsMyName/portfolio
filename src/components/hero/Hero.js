@@ -10,11 +10,12 @@ const Hero = () => {
         <div className="hero__info">
           <div className="hero__title">
             <HeroQuotes />
-            <h3>이준현.</h3>
+            <h3>이 준 현</h3>
           </div>
 
           <p className="hero__text">
-            어제보다 성장하는 <strong>이준현</strong> 입니다.
+          바뀌어 가는 풍경을 바라보며 <br />
+          걷는 것을 좋아하는 준현이는
             <br />
               배움을 향해 <strong>여행</strong> 하고 있습니다.
             <br />
