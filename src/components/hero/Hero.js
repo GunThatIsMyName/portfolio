@@ -4,6 +4,14 @@ import { HeroImage, HeroQuotes } from "..";
 
 
 const Hero = () => {
+  
+  const handleDiscover=()=>{
+    window.scrollTo({
+      left:0,
+      top:900
+    })
+  } 
+
   return (
     <Wrapper id="home">
       <div className="hero">
@@ -22,7 +30,7 @@ const Hero = () => {
           </p>
 
           <div className="hero__icon">
-            <button className="hero__btn">Discover More</button>
+            <button onClick={handleDiscover} className="hero__btn">Discover More</button>
           </div>
         </div>
 
