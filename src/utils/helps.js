@@ -8,6 +8,7 @@ import image6 from "../images/6.png";
 import shopmobile from "../images/shopmobile.png";
 import dreammobile from "../images/dreammobile.png";
 import metamobile from "../images/metamobile.png";
+import mypetimage from "../images/mypetimage.png";
 
 import { FaGithub } from "react-icons/fa";
 import { SiCodesandbox, SiFreecodecamp } from "react-icons/si";
@@ -50,6 +51,17 @@ const siteList = [
     tech: ["React JS", "styled-components", "promptapi"],
     github: "https://github.com/GunThatIsMyName/meta-tags",
     image: metamobile,
+  },
+  {
+    id: 4,
+    live: "https://mywebpet.shop/",
+    name: "다마고찌 사이트",
+    type: "Firebase",
+    description:
+      "Github 협업을 통해 만든 프로젝트 입니다. firebase 를 이용해서 캐릭터의 레벨업 을 구현하였으며, 레벨업시 보상으로 게임 머니를 받게됩니다. 게임머니를 통해 캐릭터를 마음대로 꾸밀수있습니다. 유저들의 레벨,게임 머니, 캐릭터의 모습은 실시간으로 다른 유저에게 보여집니다. ",
+    tech: ["React JS", "styled-components", "firebase","github"],
+    github: "https://github.com/mandy0529/web-pet",
+    image: mypetimage,
   },
 ];
 
