@@ -11,7 +11,7 @@ import metamobile from "../images/metamobile.png";
 import mypetimage from "../images/mypetimage.png";
 
 import { FaGithub } from "react-icons/fa";
-import { SiCodesandbox, SiFreecodecamp } from "react-icons/si";
+import { SiFreecodecamp,SiNotion } from "react-icons/si";
 
 const siteList = [
   {
@@ -83,9 +83,9 @@ const infoList = [
   },
   {
     id: 2,
-    icon: <SiCodesandbox />,
-    name: "sandbox",
-    link: "https://codesandbox.io/u/Jooning",
+    icon: <SiNotion />,
+    name: "Notion Resume",
+    link: "https://adaptive-otter-f22.notion.site/adff99a2dff847c19218da6de56bc230",
   },
   {
     id: 3,
