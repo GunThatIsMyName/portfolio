@@ -6,9 +6,9 @@ import image5 from "../images/5.png";
 import image6 from "../images/6.png";
 
 import shopmobile from "../images/shopmobile.png";
-import dreammobile from "../images/dreammobile.png";
 import metamobile from "../images/metamobile.png";
 import mypetimage from "../images/mypetimage.png";
+import giphyimage from "../images/giphyimage.png";
 
 import { FaGithub } from "react-icons/fa";
 import { SiFreecodecamp,SiNotion } from "react-icons/si";
@@ -32,14 +32,14 @@ const siteList = [
   },
   {
     id: 2,
-    live: "https://albamong-eb240.firebaseapp.com/",
-    name: "습관 리코더",
-    type: "Firebase CRUD",
+    live: "https://cono-photo-booth.netlify.app/",
+    name: "움짤 , 사진 검색 사이트",
+    type: "REST Api 를 이용한 검색 사이트",
     description:
-      "건강한 습관을 만들기 위해 사소한 기록을 업로드 하는 사이트 입니다. firebase 를 이용해서 글, 사진을 업로드 합니다. 업로드된 게시물은 나포함 다른 유저에게도 실시간으로 보여집니다. 첫 화면은 firebase login 을 이용해서 로그인 한 유저만 home화면에 접속 할수 있습니다. 로그인 하지 않으면 login 화면에 남아있게 됩니다. 자신이 만든 꿈은 수정/삭제 할수 있으며 다른 유저의 게시물은 삭제 불가능 합니다.",
-    tech: ["React JS", "firebase", "styled-components", "react-router-dom"],
-    github: "https://github.com/GunThatIsMyName/dreamMong",
-    image: dreammobile,
+      "Giphy , Unsplash Rest Api 를 이용해서 원하는 움짤, 사진들을 볼수 있습니다. Gifs, photos 버튼을 클릭하여 Routes 이동이 가능하며, 원하는 사진을 검색할수 있습니다. Redux 를 사용해서 state 관리를 하였습니다. ",
+    tech: ["React JS", "Redux", "Giphy","Unsplash"],
+    github: "https://github.com/GunThatIsMyName/Photo-booth",
+    image: giphyimage,
   },
   {
     id: 3,
